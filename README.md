@@ -4,15 +4,34 @@ Colección académica de apuntes teóricos, talleres de ejercicios prácticos y 
 
 ---
 
-## Índice del Material
+## 📚 Índice del Material
 
-| Módulo / Documento | Formato TXT | Formato PDF | Descripción |
-| :--- | :---: | :---: | :--- |
-| **01. Teoría de Conjuntos** | [`01_conjuntos.txt`](./01_conjuntos.txt) | [`01_conjuntos.pdf`](./01_conjuntos.pdf) | Fundamentos de conjuntos: pertenencia ($\in$) vs. inclusión ($\subseteq$), definición por comprensión y extensión, y ejercicios resueltos paso a paso. |
-| **02. Regla de Cramer** | [`02_regla_de_cramer.txt`](./02_regla_de_cramer.txt) | [`02_regla_de_cramer.pdf`](./02_regla_de_cramer.pdf) | Resolución de sistemas de ecuaciones lineales $3 \times 3$ mediante determinantes (Método de Sarrus), comprobación formal y trampas comunes de examen. |
-| **03. Práctica Explicada de Conjuntos** | [`03_conjuntos_ejercicios_explicados.txt`](./03_conjuntos_ejercicios_explicados.txt) | [`03_conjuntos_ejercicios_explicados.pdf`](./03_conjuntos_ejercicios_explicados.pdf) | Guía práctica ampliada con problemas completamente nuevos resueltos paso a paso: pertenencia vs. inclusión, ecuaciones en $\mathbb{N}$ y $\mathbb{Z}$, fórmulas por comprensión y 10 operaciones con universal y subconjuntos. |
-| **Diccionario de Símbolos** | [`diccionario_simbolos.txt`](./diccionario_simbolos.txt) | [`diccionario_simbolos.pdf`](./diccionario_simbolos.pdf) | Glosario de referencia rápida con definiciones, sintaxis de uso, ejemplos aplicados y errores frecuentes en evaluaciones. |
-| **Taller 01: Ejercicios** | [`taller_01_conjuntos_ejercicios.txt`](./taller_01_conjuntos_ejercicios.txt) | [`taller_01_conjuntos_ejercicios.pdf`](./taller_01_conjuntos_ejercicios.pdf) | Taller de ejercitación práctica a mano con problemas de pertenencia, inclusión y conversión entre comprensión y extensión. |
+> 💡 **Formatos disponibles:** Puedes consultar cada tema en **`.txt`** (versión directa y ligera para terminal o editores de texto) o en **`.pdf`** (documento tipografiado con simbología matemática formal para lectura o impresión).
+
+### 📘 01. Teoría de Conjuntos
+> Fundamentos esenciales de conjuntos: pertenencia ($\in$) vs. inclusión ($\subseteq$), regla práctica de llaves, notación por comprensión y extensión, y ejercicios resueltos paso a paso.
+>
+> 📥 **Acceso:** [📄 `01_conjuntos.txt`](./01_conjuntos.txt) &nbsp;•&nbsp; [📕 `01_conjuntos.pdf`](./01_conjuntos.pdf) &nbsp;•&nbsp; [🔍 Ver desglose temático](#1-teoría-de-conjuntos)
+
+### 📐 02. Regla de Cramer y Determinantes
+> Resolución sistemática de sistemas lineales $3 \times 3$ mediante determinantes y Regla de Sarrus, comprobación algebraica formal y análisis de trampas de examen.
+>
+> 📥 **Acceso:** [📄 `02_regla_de_cramer.txt`](./02_regla_de_cramer.txt) &nbsp;•&nbsp; [📕 `02_regla_de_cramer.pdf`](./02_regla_de_cramer.pdf) &nbsp;•&nbsp; [🔍 Ver desglose temático](#2-regla-de-cramer-y-determinantes)
+
+### 📝 03. Práctica Explicada de Conjuntos
+> Guía práctica ampliada con problemas resueltos paso a paso: 12 reactivos de examen sobre $M = \{3, \{3\}, \{4\}, \emptyset\}$, ecuaciones en $\mathbb{N}$ y $\mathbb{Z}$, detección de patrones y 10 operaciones formales con universales.
+>
+> 📥 **Acceso:** [📄 `03_conjuntos_ejercicios_explicados.txt`](./03_conjuntos_ejercicios_explicados.txt) &nbsp;•&nbsp; [📕 `03_conjuntos_ejercicios_explicados.pdf`](./03_conjuntos_ejercicios_explicados.pdf) &nbsp;•&nbsp; [🔍 Ver desglose temático](#3-práctica-explicada-de-conjuntos-problemas-nuevos)
+
+### 📖 04. Diccionario de Símbolos Matemáticos
+> Glosario y guía de referencia rápida con definiciones formales, reglas de sintaxis, ejemplos contextualizados y advertencias sobre errores y trampas frecuentes.
+>
+> 📥 **Acceso:** [📄 `diccionario_simbolos.txt`](./diccionario_simbolos.txt) &nbsp;•&nbsp; [📕 `diccionario_simbolos.pdf`](./diccionario_simbolos.pdf) &nbsp;•&nbsp; [🔍 Ver desglose temático](#4-diccionario-de-símbolos-matemáticos)
+
+### ✏️ 05. Taller 01: Ejercicios de Práctica
+> Taller de ejercitación práctica a mano con problemas seleccionados de pertenencia, inclusión y conversión entre comprensión y extensión para preparar evaluaciones.
+>
+> 📥 **Acceso:** [📄 `taller_01_conjuntos_ejercicios.txt`](./taller_01_conjuntos_ejercicios.txt) &nbsp;•&nbsp; [📕 `taller_01_conjuntos_ejercicios.pdf`](./taller_01_conjuntos_ejercicios.pdf) &nbsp;•&nbsp; [🔍 Ver desglose temático](#5-taller-de-práctica)
 
 ---
 
