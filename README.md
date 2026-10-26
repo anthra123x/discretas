@@ -10,6 +10,7 @@ Colección académica de apuntes teóricos, talleres de ejercicios prácticos y 
 | :--- | :---: | :---: | :--- |
 | **01. Teoría de Conjuntos** | [`01_conjuntos.txt`](./01_conjuntos.txt) | [`01_conjuntos.pdf`](./01_conjuntos.pdf) | Fundamentos de conjuntos: pertenencia ($\in$) vs. inclusión ($\subseteq$), definición por comprensión y extensión, y ejercicios resueltos paso a paso. |
 | **02. Regla de Cramer** | [`02_regla_de_cramer.txt`](./02_regla_de_cramer.txt) | [`02_regla_de_cramer.pdf`](./02_regla_de_cramer.pdf) | Resolución de sistemas de ecuaciones lineales $3 \times 3$ mediante determinantes (Método de Sarrus), comprobación formal y trampas comunes de examen. |
+| **03. Práctica Explicada de Conjuntos** | [`03_conjuntos_ejercicios_explicados.txt`](./03_conjuntos_ejercicios_explicados.txt) | [`03_conjuntos_ejercicios_explicados.pdf`](./03_conjuntos_ejercicios_explicados.pdf) | Guía práctica ampliada con problemas completamente nuevos resueltos paso a paso: pertenencia vs. inclusión, ecuaciones en $\mathbb{N}$ y $\mathbb{Z}$, fórmulas por comprensión y 10 operaciones con universal y subconjuntos. |
 | **Diccionario de Símbolos** | [`diccionario_simbolos.txt`](./diccionario_simbolos.txt) | [`diccionario_simbolos.pdf`](./diccionario_simbolos.pdf) | Glosario de referencia rápida con definiciones, sintaxis de uso, ejemplos aplicados y errores frecuentes en evaluaciones. |
 | **Taller 01: Ejercicios** | [`taller_01_conjuntos_ejercicios.txt`](./taller_01_conjuntos_ejercicios.txt) | [`taller_01_conjuntos_ejercicios.pdf`](./taller_01_conjuntos_ejercicios.pdf) | Taller de ejercitación práctica a mano con problemas de pertenencia, inclusión y conversión entre comprensión y extensión. |
 
@@ -27,11 +28,17 @@ Colección académica de apuntes teóricos, talleres de ejercicios prácticos y 
 - **Resolución matricial:** Cálculo sistemático de los determinantes $\Delta$, $\Delta_x$, $\Delta_y$ y $\Delta_z$.
 - **Comprobación algebraica:** Verificación de soluciones en el sistema original y análisis de casos singulares ($\Delta = 0$).
 
-### 3. Diccionario de Símbolos Matemáticos
+### 3. Práctica Explicada de Conjuntos (Problemas Nuevos)
+- **Pertenencia vs. Inclusión:** Análisis exhaustivo sobre el conjunto $M = \{3, \{3\}, \{4\}, \emptyset\}$ con 12 reactivos de examen y justificación paso a paso.
+- **Comprensión a Extensión:** Ecuaciones cuadráticas con descarte por universo natural, palabras con letras repetidas, disyunciones lógicas con valor absoluto e intervalos estrictos.
+- **Extensión a Comprensión:** Detección de patrones en sucesiones (múltiplos, cubos perfectos, potencias de base 2 y progresiones aritméticas).
+- **Operaciones entre Conjuntos:** Resolución de las 10 operaciones formales sobre $U = \{1, \dots, 10\}$ con subconjuntos $A, B, C$: unión, intersección, diferencias, complementos, diferencia simétrica y leyes de De Morgan.
+
+### 4. Diccionario de Símbolos Matemáticos
 - **Conjuntos y Lógica:** Significado formal, regla de sintaxis, ejemplo ilustrativo y advertencias para símbolos comunes ($\{\}$, $\in$, $\notin$, $\subseteq$, $\emptyset$, entre otros).
 - **Estructura por entrada:** Cada término detalla su definición formal, contexto de aplicación en parciales y advertencias sobre trampas frecuentes.
 
-### 4. Taller de Práctica
+### 5. Taller de Práctica
 - **Ejercicios a mano:** Problemas seleccionados para consolidar la distinción de operadores y el despeje de ecuaciones algebraicas asociadas a restricciones de dominio.
 
 ---
@@ -44,6 +51,8 @@ discretas/
 ├── 01_conjuntos.pdf
 ├── 02_regla_de_cramer.txt
 ├── 02_regla_de_cramer.pdf
+├── 03_conjuntos_ejercicios_explicados.txt
+├── 03_conjuntos_ejercicios_explicados.pdf
 ├── diccionario_simbolos.txt
 ├── diccionario_simbolos.pdf
 ├── taller_01_conjuntos_ejercicios.txt
