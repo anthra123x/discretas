@@ -1,0 +1,89 @@
+======================================================================
+TALLER DE PRACTICA A MANO - MODULO 1: TEORIA DE CONJUNTOS
+======================================================================
+
+INSTRUCCIONES:
+Resuelve estos ejercicios en tu cuaderno u hoja a mano. Muestra el 
+procedimiento breve o justificacion donde se requiera. Cuando termines 
+una seccion, toma una foto o captura y enviala para revisarla paso a paso.
+
+
+----------------------------------------------------------------------
+SECCION 1: PERTENENCIA (∈) VS. INCLUSION (⊆)
+----------------------------------------------------------------------
+
+Dado el conjunto:
+    E = { a, {a}, ∅ }
+
+Determinar si cada proposicion es VERDADERA (V) o FALSA (F), justificando 
+brevemente tu respuesta al lado (recuerda la regla de las llaves):
+
+1.  a ∈ E
+2.  {a} ∈ E
+3.  a ⊆ E
+4.  {a} ⊆ E
+5.  {{a}} ⊆ E
+6.  ∅ ∈ E
+7.  ∅ ⊆ E
+8.  {∅} ⊆ E
+
+
+----------------------------------------------------------------------
+SECCION 2: DE COMPRENSION A EXTENSION (LISTAR LOS ELEMENTOS)
+----------------------------------------------------------------------
+
+Escribir por extension (es decir, listando todos sus elementos entre llaves) 
+los siguientes conjuntos. Ojo con el universo (N son naturales, Z son enteros):
+
+1.  A = { x ∈ N / x^2 - 5x - 6 = 0 }
+    (Pista: factoriza la cuadratica y verifica si las soluciones son naturales)
+
+2.  B = { x / x es una letra de la palabra "excusa" }
+    (Pista: las letras repetidas se colocan solo una vez)
+
+3.  C = { x ∈ Z / x^2 - 9 = 0  v  2x - 1 = 9 }
+    (Pista: resuelve ambas ecuaciones y une las respuestas validas en Z)
+
+4.  D = { x ∈ N / 2 <= x < 7 }
+    (Pista: revisa con cuidado que numero incluye y cual no)
+
+5.  E = { x ∈ Z / |x| < 3 }
+    (Pista: enteros cuyo valor absoluto sea estrictamente menor que 3)
+
+
+----------------------------------------------------------------------
+SECCION 3: DE EXTENSION A COMPRENSION (ENCONTRAR LA REGLA O FORMULA)
+----------------------------------------------------------------------
+
+Escribir por comprension los siguientes conjuntos:
+
+1.  F = { 2, 4, 6, 8, 10 }
+2.  G = { 1, 4, 9, 16, 25 }
+3.  H = { ..., -6, -3, 0, 3, 6, ... }
+4.  I = { 1, 3, 5, 7, 9, 11 }
+
+
+----------------------------------------------------------------------
+SECCION 4: OPERACIONES ENTRE CONJUNTOS
+----------------------------------------------------------------------
+
+Dado el conjunto universal:
+    U = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
+
+Y los subconjuntos:
+    A = { 1, 2, 3, 4, 5, 6 }
+    B = { 4, 5, 6, 7, 8 }
+    C = { 2, 4, 6, 8, 10 }
+
+Determinar por extension el resultado de cada una de las operaciones:
+
+1.   A U B                (Union: todos los elementos de A o de B)
+2.   A ∩ B                (Interseccion: elementos comunes entre A y B)
+3.   A - B                (Diferencia: los que estan en A pero no en B)
+4.   B - A                (Diferencia: los que estan en B pero no en A)
+5.   A'                   (Complemento: los de U que no estan en A)
+6.   A Δ B                (Diferencia simetrica: estan en A o en B, pero no en ambos)
+7.   (A U B) ∩ C
+8.   A - (B ∩ C)
+9.   (A ∩ B)'
+10.  (A - C) U (B - C)

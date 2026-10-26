@@ -1,0 +1,210 @@
+======================================================================
+DICCIONARIO DE SIMBOLOS MATEMATICOS - MATEMATICAS DISCRETAS
+======================================================================
+
+Este documento es tu guia de consulta rapida. Explica que significa cada 
+simbolo, para que sirve, un ejemplo practico y la advertencia para no 
+caer en trampas de parcial.
+
+
+======================================================================
+BLOQUE 1: SIMBOLOS DE TEORIA DE CONJUNTOS
+======================================================================
+
+1.  {  }  (Llaves de conjunto)
+    - Que significa: Delimita el contenido de un conjunto.
+    - Como se usa: Encierra la lista de elementos o la regla que los define.
+    - Ejemplo: A = {1, 3, 5}
+    - Advertencia de examen: El orden no importa ({1, 2} es lo mismo que {2, 1}) 
+      y los elementos repetidos se cuentan una sola vez ({1, 1, 2} = {1, 2}).
+
+
+2.  ∈  (Pertenece a)
+    - Que significa: Indica que un OBJETO INDIVIDUAL es miembro de un conjunto.
+    - Como se usa: Siempre conecta "Elemento ∈ Conjunto".
+    - Ejemplo: Si A = {4, 7}, entonces 4 ∈ A (Verdadero), pero 5 ∈ A (Falso).
+    - Advertencia de examen: Para que sea verdadero, lo que esta a la izquierda 
+      del simbolo debe estar escrito TAL CUAL dentro de las llaves del conjunto.
+
+
+3.  ∉  (No pertenece a)
+    - Que significa: Indica que un objeto NO forma parte del conjunto.
+    - Ejemplo: Si A = {1, 2}, entonces 3 ∉ A (Verdadero).
+
+
+4.  ⊆  (Subconjunto / Incluido en / Contenido en)
+    - Que significa: Indica que un CONJUNTO completo esta adentro de otro CONJUNTO.
+    - Como se usa: Siempre conecta "Conjunto ⊆ Conjunto". Todos los elementos del 
+      primer conjunto deben estar tambien en el segundo.
+    - Ejemplo: {1, 2} ⊆ {1, 2, 3} (Verdadero).
+    - Advertencia de examen: No puedes poner "elemento ⊆ conjunto". 
+      Por ejemplo: 1 ⊆ {1, 2} es FALSO. Lo correcto es ponerle llaves: {1} ⊆ {1, 2}.
+
+
+5.  ⊂  (Subconjunto propio / Inclusion estricta)
+    - Que significa: El primer conjunto esta totalmente dentro del segundo, PERO 
+      el segundo tiene al menos un elemento mas (no son iguales).
+    - Ejemplo: {1, 2} ⊂ {1, 2, 3} es Verdadero.
+      Pero {1, 2, 3} ⊂ {1, 2, 3} es FALSO (son iguales). En cambio, con ⊆ si 
+      seria verdadero: {1, 2, 3} ⊆ {1, 2, 3} (Verdadero).
+
+
+6.  ∅  o  { }  (Conjunto Vacio)
+    - Que significa: Un conjunto que no contiene absolutamente ningun elemento.
+    - Regla de oro universal: ∅ ⊆ A es SIEMPRE VERDADERO para cualquier conjunto A.
+    - Advertencia de examen: Nunca escribas {∅} para decir "vacio". {∅} es un conjunto 
+      que contiene un elemento (el simbolo de vacio). El vacio se escribe ∅ o bien {}.
+
+
+7.  U  (Conjunto Universal o Referencial)
+    - Que significa: Es el conjunto "marco" que contiene a todos los elementos posibles 
+      del problema actual. Nada puede existir por fuera de U.
+    - Ejemplo: Si estamos jugando con dados, U = {1, 2, 3, 4, 5, 6}.
+
+
+8.  P(A)  o  2^A  (Conjunto Potencia / Conjunto de Partes)
+    - Que significa: La coleccion de TODOS los posibles subconjuntos que se pueden 
+      armar con los elementos de A (incluyendo al vacio ∅ y al mismo A).
+    - Formula clave: Si el conjunto A tiene n elementos, P(A) tendra 2^n subconjuntos.
+    - Ejemplo: Si A = {x, y} (tiene 2 elementos), entonces 2^2 = 4 subconjuntos:
+      P(A) = { ∅, {x}, {y}, {x, y} }.
+
+
+
+======================================================================
+BLOQUE 2: OPERACIONES ENTRE CONJUNTOS
+======================================================================
+
+1.  ∪  (Union)
+    - Que significa: "Juntar todo". Reune todos los elementos de ambos conjuntos.
+    - Se asocia con la palabra logica: "O" (disyuncion).
+    - Ejemplo: Si A = {1, 2} y B = {2, 3}, entonces A ∪ B = {1, 2, 3}.
+
+
+2.  ∩  (Interseccion)
+    - Que significa: "Lo compartido / lo comun". Solo los elementos que estan en 
+      ambos conjuntos a la misma vez.
+    - Se asocia con la palabra logica: "Y" (conjuncion).
+    - Ejemplo: Si A = {1, 2} y B = {2, 3}, entonces A ∩ B = {2}.
+
+
+3.  -  o  \  (Diferencia de conjuntos)
+    - Que significa: "A lo que tiene el primero, quitale lo que comparte con el segundo".
+    - Formula en palabras: A - B son los elementos que estan en A pero NO estan en B.
+    - Ejemplo: Si A = {1, 2, 3, 4} y B = {3, 4, 5}, entonces:
+      A - B = {1, 2}  (los de A quitandole el 3 y 4).
+      B - A = {5}     (los de B quitandole el 3 y 4).
+    - Advertencia de examen: El orden importa mucho: A - B no es igual a B - A.
+
+
+4.  Δ  (Diferencia Simetrica)
+    - Que significa: "Los que estan en uno o en otro, pero NO en ambos al mismo tiempo".
+    - Formula: A Δ B = (A ∪ B) - (A ∩ B), o tambien (A - B) ∪ (B - A).
+    - Ejemplo: Si A = {1, 2, 3} y B = {2, 3, 4}, los comunes son {2, 3}.
+      Por tanto, A Δ B = {1, 4}.
+
+
+5.  A'  o  A^c  (Complemento de A)
+    - Que significa: "Todo lo que le falta a A para ser igual al conjunto Universal U".
+    - Formula: A' = U - A (todo lo del universo que no este en A).
+    - Ejemplo: Si U = {1, 2, 3, 4, 5} y A = {2, 4}, entonces A' = {1, 3, 5}.
+
+
+
+======================================================================
+BLOQUE 3: SIMBOLOS DE LOGICA Y CONDICIONES (COMPRENSION)
+======================================================================
+
+1.  /  o  |  (Tal que / Dado que)
+    - Que significa: Separa el tipo de elemento de la condicion que debe cumplir.
+    - Lectura: { x ∈ N / x < 5 } se lee "Los elementos x pertenecientes a los naturales 
+      TAL QUE x sea menor que 5".
+
+
+2.  ∧  (Conjuncion / "Y")
+    - Que significa: Ambas condiciones deben cumplirse obligatoriamente al mismo tiempo.
+    - Equivalencia en conjuntos: Corresponde a la INTERSECCION (∩).
+    - Ejemplo: "x es par ∧ x > 10".
+
+
+3.  ∨  (Disyuncion / "O")
+    - Que significa: Basta con que se cumpla al menos una de las dos condiciones.
+    - Equivalencia en conjuntos: Corresponde a la UNION (∪).
+    - Ejemplo: "x = 2 ∨ x = -5" significa que ambas respuestas son validas y se unen.
+
+
+4.  | x |  (Barras de Valor Absoluto)
+    - Que significa: Distancia de un numero al cero (siempre da positivo o cero).
+    - Regla para desigualdades:
+      * |x| < a  significa que x esta encerrado entre -a y a:  -a < x < a.
+        Ejemplo: |x| < 3 en enteros son los numeros: {-2, -1, 0, 1, 2}.
+      * |x| > a  significa que x es muy grande positivo o muy grande negativo: 
+        x > a  o  x < -a.
+
+
+5.  CONJUNTOS NUMERICOS FUNDAMENTALES:
+    - N (Naturales): {1, 2, 3, 4, 5, ...} -> Solo enteros positivos (en algunos cursos 
+      incluyen el 0; revisa tu clase. No tienen negativos ni decimales).
+    - Z (Enteros): {..., -3, -2, -1, 0, 1, 2, 3, ...} -> Positivos, negativos y cero.
+    - Q (Racionales): Fracciones y decimales que se pueden escribir como a/b.
+    - R (Reales): Toda la recta numerica (enteros, fracciones, raices, pi, etc.).
+
+
+
+======================================================================
+BLOQUE 4: SIMBOLOS EN SUCESIONES
+======================================================================
+
+1.  a_n , a_k , a_h  (Termino n-esimo o general)
+    - Que significa: El valor del elemento que esta en la posicion n de la lista.
+    - El subindice (n o k): Es el numero de posicion (1 para el primer termino, 
+      2 para el segundo, etc.).
+    - Ejemplo: Si a_n = 2n + 1:
+      Posicion 1 (n=1): a_1 = 2(1) + 1 = 3
+      Posicion 2 (n=2): a_2 = 2(2) + 1 = 5
+
+
+2.  a_{k-1}  (Termino anterior)
+    - Que significa: En relaciones de recurrencia, representa el valor que acabas 
+      de calcular en el paso previo.
+    - Ejemplo: e_k = -3 * e_{k-1} + 2 significa: "el termino actual es igual a 
+      multiplicar el termino anterior por -3 y sumarle 2".
+
+
+3.  (-1)^n  o  (-1)^k  (El Alternador de Signo)
+    - Que significa: Hace que los signos se intercalen entre positivo y negativo.
+    - Cuando n es impar (1, 3, 5): (-1)^1 = -1 (da negativo).
+    - Cuando n es par (2, 4, 6): (-1)^2 = +1 (da positivo).
+
+
+
+======================================================================
+BLOQUE 5: SIMBOLOS EN MATRICES, DETERMINANTES Y CRAMER
+======================================================================
+
+1.  [  ]  o  (  )  (Corchetes o parentesis de Matriz)
+    - Que significa: Una tabla o arreglo rectangular de numeros organizados en filas 
+      (horizontales) y columnas (verticales).
+    - Dimension (m x n): m filas por n columnas.
+
+
+2.  | A |  o  det(A)  (Barras rectas de Determinante)
+    - Que significa: No es una matriz, es un UNICO NUMERO que se calcula multiplicando 
+      y restando las diagonales de una matriz cuadrada.
+    - Advertencia: Si tiene corchetes [ ] es la matriz completa; si tiene barras 
+      rectas | | te estan pidiendo calcular su determinante.
+
+
+3.  Δ  (Delta / Determinante principal del sistema)
+    - Que significa: En la Regla de Cramer, es el determinante formado exclusivamente 
+      por los coeficientes de las incognitas (x, y, z).
+    - Condicion indispensable: Para que el sistema tenga solucion unica, Δ NO puede ser 0.
+
+
+4.  Δx , Δy , Δz  (Determinantes de las incognitas)
+    - Que significa: El determinante que se obtiene reemplazando la columna de esa 
+      letra por la columna de los terminos independientes (los numeros despues del igual).
+    - Formula final de Cramer:
+      x = Δx / Δ
+      y = Δy / Δ
+      z = Δz / Δ
