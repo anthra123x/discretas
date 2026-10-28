@@ -1,343 +1,197 @@
-GUIA DE ESTUDIO: MATEMATICAS DISCRETAS - PRACTICA EXPLICADA DE CONJUNTOS
+========================================================================
+MODULO 3: PRACTICA EXPLICADA DE CONJUNTOS - BANCO INTENSIVO
 ========================================================================
 
-Bienvenido. Este documento complementario esta diseñado para que domines 
-cada seccion del taller de teoria de conjuntos mediante ejercicios 
-completamente nuevos, resueltos paso a paso y con explicacion razonada 
-de cada concepto y trampa de examen.
-
-
-========================================================================
-PARTE 1: PERTENENCIA (∈) VS. INCLUSION (⊆) - GUIA DE DECISION DEFINITIVA
-========================================================================
-
-Para dominar esta parte sin fallar ningun punto en el parcial, aplica 
-siempre estos dos principios fundamentales:
-
-1. Relacion de PERTENENCIA (simbolo ∈):
-   - Conecta: "Elemento ∈ Conjunto".
-   - Regla de oro: Abres la caja del conjunto. Si lo que esta a la izquierda 
-     del simbolo aparece escrito IDENTICO (con llaves o sin llaves, tal cual) 
-     en la lista de elementos, es VERDADERO. De lo contrario, es FALSO.
-
-2. Relacion de INCLUSION (simbolo ⊆):
-   - Conecta: "Conjunto ⊆ Conjunto".
-   - Regla practica de las llaves: Tomas lo que esta a la izquierda de ⊆ 
-     y le retiras UNicamente las llaves exteriores mas externas. Los elementos 
-     resultantes deben pertenecer individualmente al conjunto de la derecha. 
-     Si todos estan adentro, es VERDADERO. Si falta uno o si el lado izquierdo 
-     ni siquiera tenia llaves de conjunto, es FALSO.
-   - Regla universal del vacio: El conjunto vacio (∅) es subconjunto de 
-     cualquier conjunto existente. Por definicion, ∅ ⊆ X es SIEMPRE VERDADERO.
-
-
-EJERCICIO DE APLICACION COMPLETO:
-Dado el conjunto de examen:
-    M = { 3, {3}, {4}, ∅ }
-
-Fijate bien en lo que contiene la caja M. Tiene exactamente cuatro elementos:
-- Primer elemento: el numero 3 suelto.
-- Segundo elemento: el conjunto {3} (aqui las llaves son parte del elemento).
-- Tercer elemento: el conjunto {4} (el 4 suelto no esta en la caja, solo {4}).
-- Cuarto elemento: el simbolo del conjunto vacio ∅.
-
-Analicemos las 12 proposiciones tipicas de examen:
-
-Pregunta 1: ¿3 ∈ M?
-Respuesta: VERDADERO.
-Justificacion: Buscamos en la lista de M y vemos el numero 3 suelto de forma exacta.
-
-Pregunta 2: ¿{3} ∈ M?
-Respuesta: VERDADERO.
-Justificacion: Buscamos en la lista y encontramos explicitamente el elemento {3}.
-
-Pregunta 3: ¿3 ⊆ M?
-Respuesta: FALSO.
-Justificacion: El simbolo 3 a secas es un elemento individual, no un conjunto. 
-Para que pueda existir inclusion, el lado izquierdo debe ser un conjunto (debe tener llaves).
-
-Pregunta 4: ¿{3} ⊆ M?
-Respuesta: VERDADERO.
-Justificacion: Aplicamos la regla: quitamos las llaves a {3} y nos queda el 3. 
-¿El 3 pertenece a M? Si, lo vimos en la pregunta 1. Por lo tanto, el subconjunto {3} esta incluido en M.
-
-Pregunta 5: ¿{{3}} ⊆ M?
-Respuesta: VERDADERO.
-Justificacion: Quitamos las llaves exteriores a {{3}} y nos queda el objeto {3}. 
-¿El objeto {3} pertenece a M? Si, es el segundo elemento de M. Por lo tanto, {{3}} ⊆ M es verdadero.
-
-Pregunta 6: ¿4 ∈ M?
-Respuesta: FALSO.
-Justificacion: Trampa clasica. En la caja M esta el objeto {4}, pero el numero 4 suelto no existe en la lista.
-
-Pregunta 7: ¿{4} ∈ M?
-Respuesta: VERDADERO.
-Justificacion: El objeto {4} figura tal cual como el tercer elemento de la caja.
-
-Pregunta 8: ¿{4} ⊆ M?
-Respuesta: FALSO.
-Justificacion: Al quitar las llaves exteriores a {4} nos queda el numero 4. 
-Como el 4 suelto NO pertenece a M (pregunta 6), el conjunto {4} no puede ser subconjunto de M.
-
-Pregunta 9: ¿{{4}} ⊆ M?
-Respuesta: VERDADERO.
-Justificacion: Le quitamos las llaves exteriores a {{4}} y obtenemos {4}. 
-Como {4} si pertenece a M (pregunta 7), entonces {{4}} ⊆ M es verdadero.
-
-Pregunta 10: ¿∅ ∈ M?
-Respuesta: VERDADERO.
-Justificacion: Es verdadero unicamente porque el profesor coloco el simbolo ∅ 
-adentro de la definicion de M.
-
-Pregunta 11: ¿∅ ⊆ M?
-Respuesta: VERDADERO.
-Justificacion: Regla universal: el conjunto vacio siempre es subconjunto de todo conjunto. 
-Esta afirmacion jamas es falsa.
-
-Pregunta 12: ¿{∅} ⊆ M?
-Respuesta: VERDADERO.
-Justificacion: Le quitamos las llaves a {∅} y nos queda el simbolo ∅. 
-Como ∅ ∈ M (pregunta 10), el conjunto {∅} si esta incluido en M.
+METODOLOGIA DE APRENDIZAJE ACELERADO (METODO DE 4 PASOS):
+1. Algoritmo Mental: Criterios exactos de evaluacion y resolucion.
+2. Ejemplo Modelo: Demostracion con justificacion formal paso a paso.
+3. Tu Turno (Ejercicio Espejo): Reactivos tipo parcial para resolver solo.
+4. Solucion y Checkpoint: Resolucion detallada para validacion inmediata.
 
 
 ========================================================================
-PARTE 2: DE COMPRENSION A EXTENSION (RESOLUCION Y TRAMPAS DE DOMINIO)
+BLOQUE 1: LOS 12 REACTIVOS CRITICOS DE PERTENENCIA (∈) E INCLUSION (⊆)
 ========================================================================
 
-Escribir por extension implica determinar el listado exacto de elementos 
-que satisfacen las condiciones dadas, respetando rigurosamente el universo:
-- N = { 1, 2, 3, 4, ... }  (Numeros naturales: enteros estrictamente positivos, sin cero ni negativos).
-- Z = { ..., -3, -2, -1, 0, 1, 2, 3, ... }  (Numeros enteros: positivos, negativos y el cero).
+1. ALGORITMO DE EVALUACION RAPIDA:
+- Pertenencia (x ∈ M): Abres M. ¿Esta el elemento x exactamente igual 
+  a como esta escrito (con o sin llaves)? Si si -> V. Si no -> F.
+- Inclusion (X ⊆ M):
+  * ¿Es ∅ ⊆ M? -> V SIEMPRE (axioma universal).
+  * ¿Tiene llaves exteriores? Si no tiene llaves -> F INMEDIATO.
+  * Destapa las llaves exteriores: Comprueba si cada elemento interno 
+    pertenece a M. Si todos estan -> V. Si falta uno -> F.
 
 
-Ejercicio 1: A = { x ∈ N / x^2 - 2x - 8 = 0 }
-Procedimiento:
-1. Tomamos la ecuacion cuadratica x^2 - 2x - 8 = 0.
-2. Factorizamos buscando dos numeros que multiplicados den -8 y sumados den -2:
-   (x - 4)(x + 2) = 0
-3. Obtenemos dos raices algebraicas: x = 4  y  x = -2.
-4. Verificamos la restriccion de universo: x debe pertenecer a N.
-   - El numero 4 si es natural (4 ∈ N).
-   - El numero -2 es negativo, por lo que no es natural (-2 ∉ N).
-5. Descartamos -2 y conservamos unicamente las soluciones validas en N.
-Respuesta por extension:
-A = { 4 }
+2. EJEMPLO MODELO: CONJUNTO M = { 3, {3}, {4}, ∅ }
+Elementos: 3, {3}, {4}, ∅.
+
+1.  3 ∈ M      -> V (El 3 suelto esta en la lista).
+2.  {3} ∈ M    -> V (El objeto {3} es el 2.° elemento).
+3.  3 ⊆ M      -> F (No tiene llaves; elemento no incluye).
+4.  {3} ⊆ M    -> V (Destapamos {3} -> 3. Como 3 ∈ M -> V).
+5.  {{3}} ⊆ M  -> V (Destapamos {{3}} -> {3}. Como {3} ∈ M -> V).
+6.  4 ∈ M      -> F (Trampa: en M esta {4}, pero el 4 suelto no).
+7.  {4} ∈ M    -> V (El objeto {4} es el 3.° elemento).
+8.  {4} ⊆ M    -> F (Destapamos {4} -> 4. Pero 4 ∉ M -> F).
+9.  {{4}} ⊆ M  -> V (Destapamos {{4}} -> {4}. Como {4} ∈ M -> V).
+10. ∅ ∈ M      -> V (Esta explico en la lista).
+11. ∅ ⊆ M      -> V (Regla universal del vacio).
+12. {∅} ⊆ M    -> V (Destapamos {∅} -> ∅. Como ∅ ∈ M -> V).
 
 
-Ejercicio 2: B = { x / x es una letra de la palabra "universidad" }
-Procedimiento:
-1. Listamos las letras en el orden en que aparecen: u, n, i, v, e, r, s, i, d, a, d.
-2. Identificamos elementos repetidos: la letra 'i' aparece 2 veces y la letra 'd' aparece 2 veces.
-3. En teoria de conjuntos los elementos repetidos solo se registran una unica vez.
-Respuesta por extension:
-B = { a, d, e, i, n, r, s, u, v }
+3. TU TURNO: EJERCICIO ESPEJO 1
+Dado el conjunto: W = { 5, {5}, {1, 2}, ∅ }
+Determina si cada una es V o F:
+1.  5 ∈ W
+2.  {5} ∈ W
+3.  5 ⊆ W
+4.  {5} ⊆ W
+5.  {{5}} ⊆ W
+6.  1 ∈ W
+7.  {1, 2} ∈ W
+8.  {1, 2} ⊆ W
+9.  {{1, 2}} ⊆ W
+10. ∅ ∈ W
+11. ∅ ⊆ W
+12. {∅} ⊆ W
 
-
-Ejercicio 3: C = { x ∈ Z / x^2 - 16 = 0  v  3x + 2 = -7 }
-Procedimiento:
-1. El conector 'v' (disyuncion o union logica) indica que cualquier elemento 
-   que cumpla la primera ecuacion O la segunda ecuacion formara parte del conjunto.
-2. Primera condicion: x^2 - 16 = 0
-   x^2 = 16  =>  x = 4  y  x = -4.
-   Ambos numeros pertenecen a Z (son enteros).
-3. Segunda condicion: 3x + 2 = -7
-   3x = -7 - 2
-   3x = -9
-   x = -9 / 3 = -3.
-   El numero -3 pertenece a Z (es entero).
-4. Reunimos todas las soluciones obtenidas sin duplicados:
-Respuesta por extension:
-C = { -4, -3, 4 }
-
-
-Ejercicio 4: D = { x ∈ Z / -3 <= x < 3 }
-Procedimiento:
-1. Analizamos los extremos de la desigualdad:
-   - Extremo izquierdo: -3 <= x (menor o igual, por lo que el -3 SI se incluye).
-   - Extremo derecho: x < 3 (estrictamente menor, por lo que el 3 NO se incluye).
-2. Como el universo es Z (enteros), listamos los valores comprendidos:
-Respuesta por extension:
-D = { -3, -2, -1, 0, 1, 2 }
-
-
-Ejercicio 5: E = { x ∈ Z / |x - 1| <= 2 }
-Procedimiento:
-1. Recordamos la definicion de desigualdad con valor absoluto:
-   |u| <= k  equivale a  -k <= u <= k.
-2. Aplicamos al ejercicio:
-   -2 <= x - 1 <= 2
-3. Sumamos 1 a todos los miembros de la desigualdad:
-   -2 + 1 <= x <= 2 + 1
-   -1 <= x <= 3
-4. Listamos los numeros enteros entre -1 y 3 (ambos inclusive):
-Respuesta por extension:
-E = { -1, 0, 1, 2, 3 }
+------------------------------------------------------------------------
+[SOLUCION Y CHECKPOINT DEL EJERCICIO ESPEJO 1]
+------------------------------------------------------------------------
+1.  5 ∈ W         -> V (El 5 suelto es el 1.° elemento).
+2.  {5} ∈ W       -> V (El objeto {5} es el 2.° elemento).
+3.  5 ⊆ W         -> F (Sin llaves exteriores).
+4.  {5} ⊆ W       -> V (Destapamos {5} -> 5. Como 5 ∈ W -> V).
+5.  {{5}} ⊆ W     -> V (Destapamos {{5}} -> {5}. Como {5} ∈ W -> V).
+6.  1 ∈ W         -> F (Trampa: en W esta {1, 2}, el 1 suelto no).
+7.  {1, 2} ∈ W    -> V (El paquete {1, 2} es el 3.° elemento).
+8.  {1, 2} ⊆ W    -> F (Destapamos -> 1 y 2. Ninguno esta suelto en W).
+9.  {{1, 2}} ⊆ W  -> V (Destapamos -> {1, 2}. Como {1, 2} ∈ W -> V).
+10. ∅ ∈ W         -> V (El simbolo ∅ esta explico en W).
+11. ∅ ⊆ W         -> V (Regla universal del vacio).
+12. {∅} ⊆ W       -> V (Destapamos -> ∅. Como ∅ ∈ W -> V).
 
 
 ========================================================================
-PARTE 3: DE EXTENSION A COMPRENSION (PATRONES Y FORMULAS GENERALES)
+BLOQUE 2: COMPRENSION A EXTENSION CON RESTRICCIONES CRITICAS
 ========================================================================
 
-Para expresar un conjunto por comprension se debe identificar la propiedad 
-comun a todos sus miembros y delimitar el rango de variacion de la variable.
+1. ALGORITMO:
+- Resolver algebra.
+- Filtrar por universo (N: solo naturales positivos; Z: positivos, negativos, cero).
+- Conectar (v: unimos; ^: intersectamos).
 
+2. EJEMPLOS MODELO:
+- A = { x ∈ N / x^2 - 2x - 8 = 0 }  -> A = { 4 } (Se descarta -2 en N).
+- B = { x / x letra de "universidad" } -> B = { a, d, e, i, n, r, s, u, v }
+- C = { x ∈ Z / x^2 - 16 = 0 v 3x + 2 = -7 } -> C = { -4, -3, 4 }
+- D = { x ∈ Z / -3 <= x < 3 } -> D = { -3, -2, -1, 0, 1, 2 }
+- E = { x ∈ Z / |x - 1| <= 2 } -> E = { -1, 0, 1, 2, 3 }
 
-Ejercicio 1: F = { 5, 10, 15, 20, 25, 30 }
-Analisis:
-Son multiplos positivos de 5 que van desde el 5 hasta el 30.
-Podemos escribirlo formalmente mediante formula de variable:
-F = { 5k / k ∈ N, 1 <= k <= 6 }
-O de forma descriptiva:
-F = { x ∈ N / x es multiplo de 5  y  5 <= x <= 30 }
+3. TU TURNO: EJERCICIO ESPEJO 2
+Determina por extension:
+1. A2 = { x ∈ N / x^2 - 3x - 10 = 0 }
+2. B2 = { x / x letra de "probabilidad" }
+3. C2 = { x ∈ Z / x^2 - 36 = 0 v 2x + 5 = -1 }
+4. D2 = { x ∈ Z / -4 < x <= 2 }
+5. E2 = { x ∈ Z / |x + 1| <= 3 }
 
-
-Ejercicio 2: G = { 1, 8, 27, 64, 125 }
-Analisis:
-Observamos la relacion con los numeros naturales:
-1^3 = 1,  2^3 = 8,  3^3 = 27,  4^3 = 64,  5^3 = 125.
-Corresponde a la sucesion de cubos perfectos de los primeros 5 naturales.
-Respuesta por comprension:
-G = { x^3 / x ∈ N, 1 <= x <= 5 }
-
-
-Ejercicio 3: H = { ..., -8, -4, 0, 4, 8, ... }
-Analisis:
-Los puntos suspensivos en ambos extremos indican una serie infinita en 
-ambas direcciones. Son todos los numeros divisibles exactamente entre 4 
-en el conjunto de los enteros.
-Respuesta por comprension:
-H = { 4k / k ∈ Z }
-
-
-Ejercicio 4: I = { 2, 4, 8, 16, 32, 64 }
-Analisis:
-No son pares consecutivos; son potencias sucesivas de la base 2:
-2^1 = 2,  2^2 = 4,  2^3 = 8,  2^4 = 16,  2^5 = 32,  2^6 = 64.
-Respuesta por comprension:
-I = { 2^n / n ∈ N, 1 <= n <= 6 }
-
-
-Ejercicio 5: J = { 4, 7, 10, 13, 16 }
-Analisis:
-La secuencia avanza de 3 en 3 (progresion aritmetica de razon 3):
-Para k = 1: 3(1) + 1 = 4
-Para k = 2: 3(2) + 1 = 7
-Para k = 3: 3(3) + 1 = 10
-Para k = 4: 3(4) + 1 = 13
-Para k = 5: 3(5) + 1 = 16
-Respuesta por comprension:
-J = { 3k + 1 / k ∈ N, 1 <= k <= 5 }
+------------------------------------------------------------------------
+[SOLUCION Y CHECKPOINT DEL EJERCICIO ESPEJO 2]
+------------------------------------------------------------------------
+1. A2 = { 5 }
+2. B2 = { a, b, d, i, l, o, p, r }
+3. C2 = { -6, -3, 6 }
+4. D2 = { -3, -2, -1, 0, 1, 2 }
+5. E2 = { -4, -3, -2, -1, 0, 1, 2 }
 
 
 ========================================================================
-PARTE 4: OPERACIONES ENTRE CONJUNTOS PASO A PASO
+BLOQUE 3: EXTENSION A COMPRENSION (FORMULAS Y SUCESIONES)
 ========================================================================
 
-Consideremos el siguiente conjunto universal y tres subconjuntos definidos:
-    U = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
-    A = { 1, 2, 3, 5, 7 }
-    B = { 2, 4, 6, 7, 8 }
-    C = { 3, 5, 7, 9, 10 }
+1. ALGORITMO:
+- Diferencia constante: d*k + c.
+- Multiplos infinitos en ambos lados: m*k con k ∈ Z.
+- Crecimiento acelerado: k^2, k^3, 2^k.
 
-A continuacion se resuelve cada operacion fundamental con su justificacion:
+2. EJEMPLOS MODELO:
+- F = { 5, 10, 15, 20, 25, 30 }       -> { 5k / k ∈ N, 1 <= k <= 6 }
+- G = { 1, 8, 27, 64, 125 }           -> { k^3 / k ∈ N, 1 <= k <= 5 }
+- H = { ..., -8, -4, 0, 4, 8, ... }   -> { 4k / k ∈ Z }
+- I = { 2, 4, 8, 16, 32, 64 }         -> { 2^k / k ∈ N, 1 <= k <= 6 }
+- J = { 4, 7, 10, 13, 16 }            -> { 3k + 1 / k ∈ N, 1 <= k <= 5 }
 
+3. TU TURNO: EJERCICIO ESPEJO 3
+Escribe la formula por comprension:
+1. F3 = { 6, 12, 18, 24, 30, 36 }
+2. G3 = { 1, 16, 81, 256 }
+3. H3 = { ..., -15, -10, -5, 0, 5, 10, 15, ... }
+4. I3 = { 3, 9, 27, 81, 243 }
+5. J3 = { 5, 9, 13, 17, 21 }
 
-1. Union (A U B):
-Concepto: Reunir todos los elementos de A y de B sin repetir ninguno.
-- Elementos de A: 1, 2, 3, 5, 7
-- Elementos de B: 2, 4, 6, 7, 8
-Resultado:
-A U B = { 1, 2, 3, 4, 5, 6, 7, 8 }
-
-
-2. Interseccion (A ∩ B):
-Concepto: Seleccionar UNicamente los elementos presentes simultaneamente en A y en B.
-- Comparando A y B: los elementos comunes son el 2 y el 7.
-Resultado:
-A ∩ B = { 2, 7 }
-
-
-3. Diferencia (A - B):
-Concepto: Elementos que pertenecen a A pero NO pertenecen a B.
-- Tomamos A = {1, 2, 3, 5, 7} y removemos los que esten en B ({2, 7}).
-- Quedan: 1, 3, 5.
-Resultado:
-A - B = { 1, 3, 5 }
+------------------------------------------------------------------------
+[SOLUCION Y CHECKPOINT DEL EJERCICIO ESPEJO 3]
+------------------------------------------------------------------------
+1. F3 = { 6k / k ∈ N, 1 <= k <= 6 }
+2. G3 = { k^4 / k ∈ N, 1 <= k <= 4 }
+3. H3 = { 5k / k ∈ Z }
+4. I3 = { 3^k / k ∈ N, 1 <= k <= 5 }
+5. J3 = { 4k + 1 / k ∈ N, 1 <= k <= 5 }
 
 
-4. Diferencia inversa (B - A):
-Concepto: Elementos que pertenecen a B pero NO pertenecen a A.
-- Advertencia: la diferencia NO es conmutativa (A - B != B - A).
-- Tomamos B = {2, 4, 6, 7, 8} y quitamos los que esten en A ({2, 7}).
-- Quedan: 4, 6, 8.
-Resultado:
-B - A = { 4, 6, 8 }
+========================================================================
+BLOQUE 4: LAS 10 OPERACIONES FUNDAMENTALES CON UNIVERSALES
+========================================================================
+
+1. EJEMPLO MODELO:
+U = { 1 .. 10 }
+A = { 1, 2, 3, 5, 7 }
+B = { 2, 4, 6, 7, 8 }
+C = { 3, 5, 7, 9, 10 }
+
+Resultados:
+1. A U B = { 1, 2, 3, 4, 5, 6, 7, 8 }
+2. A ∩ B = { 2, 7 }
+3. A - B = { 1, 3, 5 }
+4. B - A = { 4, 6, 8 }
+5. A' = { 4, 6, 8, 9, 10 }
+6. A Δ B = { 1, 3, 4, 5, 6, 8 }
+7. (A U B) ∩ C = { 3, 5, 7 }
+8. A - (B ∩ C) = { 1, 2, 3, 5 }
+9. (A ∩ B)' = { 1, 3, 4, 5, 6, 8, 9, 10 }
+10. (A - C) U (B - C) = { 1, 2, 4, 6, 8 }
 
 
-5. Complemento (A'):
-Concepto: Elementos del conjunto universal U que NO pertenecen al conjunto A.
-- U = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
-- A = { 1, 2, 3, 5, 7 }
-- Quitamos de U todos los elementos de A:
-Resultado:
-A' = { 4, 6, 8, 9, 10 }
+2. TU TURNO: EJERCICIO ESPEJO 4
+Con U = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 } y:
+P = { 2, 3, 5, 7 }
+Q = { 1, 3, 5, 7, 9 }
+R = { 4, 5, 6, 7, 8 }
 
+Calcula las 10 operaciones:
+1. P U Q
+2. P ∩ Q
+3. P - Q
+4. Q - P
+5. P'
+6. P Δ Q
+7. (P U Q) ∩ R
+8. P - (Q ∩ R)
+9. (P ∩ Q)'
+10. (P - R) U (Q - R)
 
-6. Diferencia simetrica (A Δ B):
-Concepto: Elementos que estan en A o en B, pero no en ambos.
-Formula equivalente: (A - B) U (B - A)  o tambien  (A U B) - (A ∩ B).
-- Ya conocemos (A - B) = {1, 3, 5}  y  (B - A) = {4, 6, 8}.
-- Unimos ambos resultados:
-Resultado:
-A Δ B = { 1, 3, 4, 5, 6, 8 }
-
-
-7. Operacion combinada: (A U B) ∩ C
-Procedimiento:
-1. Calculamos primero el parentesis:
-   (A U B) = { 1, 2, 3, 4, 5, 6, 7, 8 }
-2. Realizamos la interseccion con C = { 3, 5, 7, 9, 10 }:
-   Buscamos elementos comunes entre {1, 2, 3, 4, 5, 6, 7, 8} y {3, 5, 7, 9, 10}.
-   Los comunes son: 3, 5, 7.
-Resultado:
-(A U B) ∩ C = { 3, 5, 7 }
-
-
-8. Operacion combinada: A - (B ∩ C)
-Procedimiento:
-1. Calculamos primero el parentesis:
-   B = { 2, 4, 6, 7, 8 }
-   C = { 3, 5, 7, 9, 10 }
-   (B ∩ C) = { 7 }
-2. Restamos este resultado al conjunto A:
-   A = { 1, 2, 3, 5, 7 }
-   A - { 7 } = { 1, 2, 3, 5 }
-Resultado:
-A - (B ∩ C) = { 1, 2, 3, 5 }
-
-
-9. Complemento de interseccion: (A ∩ B)'
-Procedimiento:
-1. Calculamos la interseccion:
-   (A ∩ B) = { 2, 7 }
-2. Hallamos el complemento respecto a U:
-   Todos los elementos de U salvo el 2 y el 7.
-Resultado:
-(A ∩ B)' = { 1, 3, 4, 5, 6, 8, 9, 10 }
-Nota teorica: Por leyes de De Morgan, (A ∩ B)' = A' U B'.
-
-
-10. Operacion compuesta: (A - C) U (B - C)
-Procedimiento:
-1. Calculamos el primer parentesis (A - C):
-   A = { 1, 2, 3, 5, 7 }
-   C = { 3, 5, 7, 9, 10 }
-   A - C = { 1, 2 }
-2. Calculamos el segundo parentesis (B - C):
-   B = { 2, 4, 6, 7, 8 }
-   C = { 3, 5, 7, 9, 10 }
-   B - C = { 2, 4, 6, 8 }
-3. Unimos ambos conjuntos:
-   { 1, 2 } U { 2, 4, 6, 8 } = { 1, 2, 4, 6, 8 }
-Resultado:
-(A - C) U (B - C) = { 1, 2, 4, 6, 8 }
+------------------------------------------------------------------------
+[SOLUCION Y CHECKPOINT DEL EJERCICIO ESPEJO 4]
+------------------------------------------------------------------------
+1. P U Q = { 1, 2, 3, 5, 7, 9 }
+2. P ∩ Q = { 3, 5, 7 }
+3. P - Q = { 2 }
+4. Q - P = { 1, 9 }
+5. P' = { 1, 4, 6, 8, 9, 10 }
+6. P Δ Q = { 1, 2, 9 }
+7. (P U Q) ∩ R = { 5, 7 }
+8. P - (Q ∩ R) = { 2, 3 }
+9. (P ∩ Q)' = { 1, 2, 4, 6, 8, 9, 10 }
+10. (P - R) U (Q - R) = { 1, 2, 3, 9 }

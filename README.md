@@ -6,32 +6,34 @@ Colección académica de apuntes teóricos, talleres de ejercicios prácticos y 
 
 ## 📚 Índice del Material
 
-> 💡 **Formatos disponibles:** Puedes consultar cada tema en **`.txt`** (versión directa y ligera para terminal o editores de texto) o en **`.pdf`** (documento tipografiado con simbología matemática formal para lectura o impresión).
+> 💡 **Metodología de Aprendizaje Acelerado (4 Pasos):** Todos los módulos están estructurados para dominar los temas rápidamente:  
+> **1. Algoritmo Mental** ➔ **2. Ejemplo Modelo** ➔ **3. Tu Turno (Ejercicio Espejo)** ➔ **4. Solución Verificada**.  
+> Disponible en **`.md` interactivo** (con soluciones en pestañas desplegables para ponerte a prueba sin ver la respuesta), **`.txt`** (lectura en terminal) y **`.pdf`** (formato editorial formal).
 
 ### 📘 01. Teoría de Conjuntos
-> Fundamentos esenciales de conjuntos: pertenencia ($\in$) vs. inclusión ($\subseteq$), regla práctica de llaves, notación por comprensión y extensión, y ejercicios resueltos paso a paso.
+> Fundamentos esenciales de conjuntos: pertenencia ($\in$) vs. inclusión ($\subseteq$), regla práctica de llaves, notación por comprensión y extensión, operaciones y ejercicios resueltos paso a paso.
 >
-> 📥 **Acceso:** [📄 `01_conjuntos.txt`](./01_conjuntos.txt) &nbsp;•&nbsp; [📕 `01_conjuntos.pdf`](./01_conjuntos.pdf) &nbsp;•&nbsp; [🔍 Ver desglose temático](#1-teoría-de-conjuntos)
+> 📥 **Formatos:** [💻 `01_conjuntos.md` (Interactivo)](./01_conjuntos.md) &nbsp;•&nbsp; [📄 `01_conjuntos.txt`](./01_conjuntos.txt) &nbsp;•&nbsp; [📕 `01_conjuntos.pdf`](./01_conjuntos.pdf) &nbsp;•&nbsp; [🔍 Ver desglose](#1-teoría-de-conjuntos)
 
 ### 📐 02. Regla de Cramer y Determinantes
-> Resolución sistemática de sistemas lineales $3 \times 3$ mediante determinantes y Regla de Sarrus, comprobación algebraica formal y análisis de trampas de examen.
+> Resolución sistemática de sistemas lineales $3 \times 3$ mediante determinantes y Regla de Sarrus, comprobación algebraica formal y análisis de trampas de examen (variables ausentes y $\Delta = 0$).
 >
-> 📥 **Acceso:** [📄 `02_regla_de_cramer.txt`](./02_regla_de_cramer.txt) &nbsp;•&nbsp; [📕 `02_regla_de_cramer.pdf`](./02_regla_de_cramer.pdf) &nbsp;•&nbsp; [🔍 Ver desglose temático](#2-regla-de-cramer-y-determinantes)
+> 📥 **Formatos:** [💻 `02_regla_de_cramer.md` (Interactivo)](./02_regla_de_cramer.md) &nbsp;•&nbsp; [📄 `02_regla_de_cramer.txt`](./02_regla_de_cramer.txt) &nbsp;•&nbsp; [📕 `02_regla_de_cramer.pdf`](./02_regla_de_cramer.pdf) &nbsp;•&nbsp; [🔍 Ver desglose](#2-regla-de-cramer-y-determinantes)
 
 ### 📝 03. Práctica Explicada de Conjuntos
-> Guía práctica ampliada con problemas resueltos paso a paso: 12 reactivos de examen sobre $M = \{3, \{3\}, \{4\}, \emptyset\}$, ecuaciones en $\mathbb{N}$ y $\mathbb{Z}$, detección de patrones y 10 operaciones formales con universales.
+> Banco intensivo con reactivos de examen paso a paso: 12 reactivos de pertenencia vs. inclusión sobre conjuntos anidados, ecuaciones en $\mathbb{N}$ y $\mathbb{Z}$, detección de patrones y las 10 operaciones formales con universales.
 >
-> 📥 **Acceso:** [📄 `03_conjuntos_ejercicios_explicados.txt`](./03_conjuntos_ejercicios_explicados.txt) &nbsp;•&nbsp; [📕 `03_conjuntos_ejercicios_explicados.pdf`](./03_conjuntos_ejercicios_explicados.pdf) &nbsp;•&nbsp; [🔍 Ver desglose temático](#3-práctica-explicada-de-conjuntos-problemas-nuevos)
+> 📥 **Formatos:** [💻 `03_conjuntos_ejercicios_explicados.md` (Interactivo)](./03_conjuntos_ejercicios_explicados.md) &nbsp;•&nbsp; [📄 `03_conjuntos_ejercicios_explicados.txt`](./03_conjuntos_ejercicios_explicados.txt) &nbsp;•&nbsp; [📕 `03_conjuntos_ejercicios_explicados.pdf`](./03_conjuntos_ejercicios_explicados.pdf) &nbsp;•&nbsp; [🔍 Ver desglose](#3-práctica-explicada-de-conjuntos-problemas-nuevos)
 
 ### 📖 04. Diccionario de Símbolos Matemáticos
 > Glosario y guía de referencia rápida con definiciones formales, reglas de sintaxis, ejemplos contextualizados y advertencias sobre errores y trampas frecuentes.
 >
-> 📥 **Acceso:** [📄 `diccionario_simbolos.txt`](./diccionario_simbolos.txt) &nbsp;•&nbsp; [📕 `diccionario_simbolos.pdf`](./diccionario_simbolos.pdf) &nbsp;•&nbsp; [🔍 Ver desglose temático](#4-diccionario-de-símbolos-matemáticos)
+> 📥 **Formatos:** [📄 `diccionario_simbolos.txt`](./diccionario_simbolos.txt) &nbsp;•&nbsp; [📕 `diccionario_simbolos.pdf`](./diccionario_simbolos.pdf) &nbsp;•&nbsp; [🔍 Ver desglose](#4-diccionario-de-símbolos-matemáticos)
 
 ### ✏️ 05. Taller 01: Ejercicios de Práctica
 > Taller de ejercitación práctica a mano con problemas seleccionados de pertenencia, inclusión y conversión entre comprensión y extensión para preparar evaluaciones.
 >
-> 📥 **Acceso:** [📄 `taller_01_conjuntos_ejercicios.txt`](./taller_01_conjuntos_ejercicios.txt) &nbsp;•&nbsp; [📕 `taller_01_conjuntos_ejercicios.pdf`](./taller_01_conjuntos_ejercicios.pdf) &nbsp;•&nbsp; [🔍 Ver desglose temático](#5-taller-de-práctica)
+> 📥 **Formatos:** [📄 `taller_01_conjuntos_ejercicios.txt`](./taller_01_conjuntos_ejercicios.txt) &nbsp;•&nbsp; [📕 `taller_01_conjuntos_ejercicios.pdf`](./taller_01_conjuntos_ejercicios.pdf) &nbsp;•&nbsp; [🔍 Ver desglose](#5-taller-de-práctica)
 
 ---
 
@@ -66,21 +68,24 @@ Colección académica de apuntes teóricos, talleres de ejercicios prácticos y 
 
 ```text
 discretas/
-├── 01_conjuntos.txt
-├── 01_conjuntos.pdf
-├── 02_regla_de_cramer.txt
-├── 02_regla_de_cramer.pdf
-├── 03_conjuntos_ejercicios_explicados.txt
-├── 03_conjuntos_ejercicios_explicados.pdf
-├── diccionario_simbolos.txt
-├── diccionario_simbolos.pdf
-├── taller_01_conjuntos_ejercicios.txt
-├── taller_01_conjuntos_ejercicios.pdf
-└── README.md
+├── 01_conjuntos.md                       # Módulo 1 interactivo con soluciones desplegables
+├── 01_conjuntos.txt                      # Módulo 1 en texto plano
+├── 01_conjuntos.pdf                      # Módulo 1 versión tipografiada
+├── 02_regla_de_cramer.md                 # Módulo 2 interactivo con soluciones desplegables
+├── 02_regla_de_cramer.txt                # Módulo 2 en texto plano
+├── 02_regla_de_cramer.pdf                # Módulo 2 versión tipografiada
+├── 03_conjuntos_ejercicios_explicados.md # Módulo 3 interactivo con soluciones desplegables
+├── 03_conjuntos_ejercicios_explicados.txt# Módulo 3 en texto plano
+├── 03_conjuntos_ejercicios_explicados.pdf# Módulo 3 versión tipografiada
+├── diccionario_simbolos.txt              # Diccionario de consulta rápida
+├── diccionario_simbolos.pdf              # Diccionario versión tipografiada
+├── taller_01_conjuntos_ejercicios.txt    # Taller para práctica a mano
+├── taller_01_conjuntos_ejercicios.pdf    # Taller versión tipografiada
+└── README.md                             # Índice general del repositorio
 ```
 
-- Cada documento de texto plano (`.txt`) cuenta con su contraparte equivalente en formato `.pdf`.
-- La organización es plana y directa para facilitar la descarga individual o la clonación completa del repositorio.
+- Cada documento cuenta con su versión interactiva en Markdown (`.md`), su versión en texto plano directo (`.txt`) y su versión editorial en `.pdf`.
+- La organización está orientada al estudio activo e interactivo para preparar exámenes en tiempo récord.
 
 ---
 

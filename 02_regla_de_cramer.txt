@@ -1,109 +1,59 @@
-GUIA DE ESTUDIO: MATEMATICAS DISCRETAS - REGLA DE CRAMER Y DETERMINANTES
+========================================================================
+MODULO 2: REGLA DE CRAMER Y DETERMINANTES - DOMINIO ACELERADO
 ========================================================================
 
-Bienvenido. Este documento esta redactado para leerse de corrido, en texto 
-limpio y paso a paso, para que domines la Regla de Cramer sin enredos.
+METODOLOGIA DE APRENDIZAJE ACELERADO (METODO DE 4 PASOS):
+1. Algoritmo Mental: El proceso de calculo sistematico paso a paso.
+2. Ejemplo Modelo: Demostracion con cada diagonal y signo explicitado.
+3. Tu Turno (Ejercicio Espejo): Sistema completo con trampa de variable ausente.
+4. Solucion y Checkpoint: Resolucion detallada con comprobacion en 30 segundos.
 
 
-PARTE 1: ¿QUE ES LA REGLA DE CRAMER Y PARA QUE SIRVE?
------------------------------------------------------
+========================================================================
+BLOQUE 1: CALCULO DE DETERMINANTES 3x3 (METODO DE SARRUS)
+========================================================================
 
-La Regla de Cramer es un metodo algebraico para resolver sistemas de 
-ecuaciones lineales utilizando DETERMINANTES. 
+1. ALGORITMO MENTAL DE SARRUS EN 4 PASOS:
 
-En tu parcial te van a poner sistemas de 3 ecuaciones con 3 incognitas 
-(x, y, z). Por ejemplo:
-1)  x + 2y - 2z = 10
-2) 4x -  y +  z = 4
-3) -2x + y +  z = -2
-
-El objetivo final es encontrar el valor exacto de x, de y, y de z.
-
-La gran ventaja de Cramer es que funciona con una receta fija que nunca cambia. 
-Solo tienes que calcular cuatro determinantes:
-1. Delta (Δ): El determinante principal del sistema (formado por los numeros que 
-   acompañan a x, y, z).
-2. Delta x (Δx): El determinante donde cambiamos la columna de las x por los 
-   numeros del resultado (los terminos independientes).
-3. Delta y (Δy): El determinante donde cambiamos la columna de las y por los 
-   numeros del resultado.
-4. Delta z (Δz): El determinante donde cambiamos la columna de las z por los 
-   numeros del resultado.
-
-Una vez calculados estos cuatro numeros, la solucion final se obtiene con 
-tres divisiones muy simples:
-- x = Δx / Δ
-- y = Δy / Δ
-- z = Δz / Δ
-
-
-PARTE 2: COMO CALCULAR UN DETERMINANTE 3x3 (METODO DE SARRUS)
--------------------------------------------------------------
-
-Un determinante de orden 3x3 es un arreglo de 3 filas y 3 columnas entre dos 
-barras verticales. No es una matriz; su resultado es un UNICO NUMERO.
-
-Para calcularlo a mano sin equivocarte, el metodo mas rapido y seguro en 
-un examen es la REGLA DE SARRUS (duplicando las dos primeras filas abajo).
-
-Imagina que tenemos este determinante:
+Sea el determinante 3x3:
 |  a   b   c |
 |  d   e   f |
 |  g   h   i |
 
-Paso 1: Copias las dos primeras filas exactamente iguales debajo de la tercera fila:
-|  a   b   c |
-|  d   e   f |
-|  g   h   i |
-- - - - - - -
-|  a   b   c |  (fila 1 repetida)
-|  d   e   f |  (fila 2 repetida)
+- Paso 1 (Duplicacion): Copias las dos primeras filas exactamente iguales 
+  debajo de la tercera fila:
+  |  a   b   c |
+  |  d   e   f |
+  |  g   h   i |
+  - - - - - - -
+  |  a   b   c |  (fila 1 repetida)
+  |  d   e   f |  (fila 2 repetida)
 
-Paso 2: Calculas las DIAGONALES PRINCIPALES (las que bajan hacia la derecha). 
-Son tres multiplicaciones y las sumas:
-Diagonal 1 = a * e * i
-Diagonal 2 = d * h * c
-Diagonal 3 = g * b * f
-Suma de principales = (Diagonal 1) + (Diagonal 2) + (Diagonal 3)
+- Paso 2 (Diagonales Principales hacia abajo a la derecha \):
+  D1 = a * e * i
+  D2 = d * h * c
+  D3 = g * b * f
+  Suma Principales (P) = D1 + D2 + D3
 
-Paso 3: Calculas las DIAGONALES SECUNDARIAS (las que bajan hacia la izquierda). 
-Son tres multiplicaciones y las sumas:
-Diagonal 4 = c * e * g
-Diagonal 5 = f * h * a
-Diagonal 6 = i * b * d
-Suma de secundarias = (Diagonal 4) + (Diagonal 5) + (Diagonal 6)
+- Paso 3 (Diagonales Secundarias hacia abajo a la izquierda /):
+  D4 = c * e * g
+  D5 = f * h * a
+  D6 = i * b * d
+  Suma Secundarias (S) = D4 + D5 + D6
 
-Paso 4: La formula final del determinante es:
-Resultado = (Suma de principales) - (Suma de secundarias)
-
-¡ALERTA MAXIMA CON EL SIGNO MENOS!: 
-El noventa por ciento de los errores en parciales ocurre aqui. El signo menos 
-de la formula le cambia el signo a TODO lo que dio la suma de secundarias.
-Por ejemplo, si las principales dieron -10 y las secundarias dieron -4, la 
-resta queda: -10 - (-4) = -10 + 4 = -6.
+- Paso 4 (Resta y Regla de Signos):
+  Resultado = P - (S)
+  ALERTA CRITICA: El signo menos le cambia el signo a todo S. 
+  Si S = -6, entonces -(-6) = +6.
 
 
-PARTE 3: EJERCICIO 1 DEL TALLER RESUELTO PASO A PASO
-----------------------------------------------------
+2. EJEMPLO MODELO: DETERMINANTE CON SIGNOS MIXTOS
+Calcular:
+|  1   2  -2 |
+|  4  -1   1 |
+| -2   1   1 |
 
-Vamos a resolver de corrido el primer ejercicio de tu taller para que veas 
-cada numero en accion:
-
-Sistema de ecuaciones:
-Ecuacion 1:   x + 2y - 2z = 10
-Ecuacion 2:  4x -  y +  z = 4
-Ecuacion 3: -2x +  y +  z = -2
-
-Terminos independientes (los numeros de la derecha): 10, 4, -2.
-
-
-PASO 1: CALCULAR EL DETERMINANTE DEL SISTEMA (Δ)
-Armamos el determinante con los coeficientes que acompañan a x, y, z:
-Fila 1:  1,   2,  -2
-Fila 2:  4,  -1,   1
-Fila 3: -2,   1,   1
-
-Aplicamos Sarrus repitiendo las dos primeras filas abajo:
+Paso 1: Duplicamos filas 1 y 2:
 |  1   2  -2 |
 |  4  -1   1 |
 | -2   1   1 |
@@ -111,158 +61,174 @@ Aplicamos Sarrus repitiendo las dos primeras filas abajo:
 |  1   2  -2 |
 |  4  -1   1 |
 
-Calculamos las tres diagonales principales (hacia abajo a la derecha):
-- Primera diagonal: 1 * (-1) * 1 = -1
-- Segunda diagonal: 4 * 1 * (-2) = -8
-- Tercera diagonal: (-2) * 2 * 1 = -4
-Suma de principales = (-1) + (-8) + (-4) = -13
+Paso 2 (Principales \):
+- D1 = 1 * (-1) * 1 = -1
+- D2 = 4 * 1 * (-2) = -8
+- D3 = (-2) * 2 * 1 = -4
+P = (-1) + (-8) + (-4) = -13
 
-Calculamos las tres diagonales secundarias (hacia abajo a la izquierda):
-- Cuarta diagonal: (-2) * (-1) * (-2) = -4  (ojo: tres negativos dan negativo)
-- Quinta diagonal: 1 * 1 * 1 = 1
-- Sexta diagonal: 1 * 2 * 4 = 8
-Suma de secundarias = (-4) + 1 + 8 = 5
+Paso 3 (Secundarias /):
+- D4 = (-2) * (-1) * (-2) = -4  (tres negativos dan negativo)
+- D5 = 1 * 1 * 1 = 1
+- D6 = 1 * 2 * 4 = 8
+S = (-4) + 1 + 8 = 5
 
-Aplicamos la formula:
-Δ = (Suma de principales) - (Suma de secundarias)
-Δ = -13 - (5) = -18
-
-Ya tenemos nuestro primer valor: Δ = -18.
-Como Δ no dio cero, confirmamos que el sistema SI tiene solucion unica.
+Paso 4:
+Delta = P - S = -13 - (5) = -18.
 
 
-PASO 2: CALCULAR EL DETERMINANTE DE X (Δx)
-Tomamos la matriz anterior, pero en la columna de las x ponemos los terminos 
-independientes (10, 4, -2). Las columnas de y y z se quedan exactamente igual:
+3. TU TURNO: EJERCICIO ESPEJO 1
+Calcula el siguiente determinante 3x3 aplicando Sarrus:
+|  2  -1   3 |
+|  1   0   2 |
+| -1   4   1 |
 
+------------------------------------------------------------------------
+[SOLUCION Y CHECKPOINT DEL EJERCICIO ESPEJO 1]
+------------------------------------------------------------------------
+Duplicamos filas:
+|  2  -1   3 |
+|  1   0   2 |
+| -1   4   1 |
+--------------
+|  2  -1   3 |
+|  1   0   2 |
+
+Principales (\):
+- 2 * 0 * 1 = 0
+- 1 * 4 * 3 = 12
+- (-1) * (-1) * 2 = 2
+P = 0 + 12 + 2 = 14
+
+Secundarias (/):
+- 3 * 0 * (-1) = 0
+- 2 * 4 * 2 = 16
+- 1 * (-1) * 1 = -1
+S = 0 + 16 - 1 = 15
+
+Resultado:
+Delta = P - S = 14 - (15) = -1.
+
+
+========================================================================
+BLOQUE 2: RESOLUCION COMPLETA DE SISTEMAS 3x3 POR CRAMER
+========================================================================
+
+1. ALGORITMO DE CRAMER EN 5 FASES:
+
+- Fase 1: Calcular Delta (con los coeficientes de x, y, z).
+  Si Delta = 0 -> Detente: el sistema no tiene solucion unica.
+- Fase 2: Calcular Delta x (reemplazando columna de x por los terminos 
+  independientes).
+- Fase 3: Calcular Delta y (reemplazando columna de y por los terminos 
+  independientes).
+- Fase 4: Calcular Delta z (reemplazando columna de z por los terminos 
+  independientes).
+- Fase 5: Divisiones finales:
+  x = Delta x / Delta
+  y = Delta y / Delta
+  z = Delta z / Delta
+- Fase 6 (Comprobacion en 30 segundos): Reemplaza (x, y, z) en la primera 
+  ecuacion original. Si da exacto, tienes 5.0 garantizado.
+
+
+2. EJEMPLO MODELO COMPLETO PASO A PASO:
+Sistema:
+1)   x + 2y - 2z = 10
+2)  4x -  y +  z = 4
+3) -2x +  y +  z = -2
+Terminos independientes: 10, 4, -2.
+
+Paso 1: Delta = -18 (calculado en Bloque 1).
+
+Paso 2: Delta x:
+Columna x cambiada por (10, 4, -2):
 | 10   2  -2 |
 |  4  -1   1 |
 | -2   1   1 |
---------------
-| 10   2  -2 |  (repetida)
-|  4  -1   1 |  (repetida)
+- Principales: 10*(-1)*1 + 4*1*(-2) + (-2)*2*1 = -10 - 8 - 4 = -22
+- Secundarias: (-2)*(-1)*(-2) + 1*1*10 + 1*2*4 = -4 + 10 + 8 = 14
+- Delta x = -22 - (14) = -36.
 
-Diagonales principales:
-- Primera diagonal: 10 * (-1) * 1 = -10
-- Segunda diagonal: 4 * 1 * (-2) = -8
-- Tercera diagonal: (-2) * 2 * 1 = -4
-Suma de principales = (-10) + (-8) + (-4) = -22
-
-Diagonales secundarias:
-- Cuarta diagonal: (-2) * (-1) * (-2) = -4
-- Quinta diagonal: 1 * 1 * 10 = 10
-- Sexta diagonal: 1 * 2 * 4 = 8
-Suma de secundarias = (-4) + 10 + 8 = 14
-
-Calculamos Δx:
-Δx = -22 - (14) = -36.
-
-
-PASO 3: CALCULAR EL DETERMINANTE DE Y (Δy)
-Ahora la columna de x vuelve a ser la original (1, 4, -2), y la que cambiamos 
-por los terminos independientes (10, 4, -2) es la columna del medio (la de y):
-
+Paso 3: Delta y:
+Columna y cambiada por (10, 4, -2):
 |  1  10  -2 |
 |  4   4   1 |
 | -2  -2   1 |
---------------
-|  1  10  -2 |  (repetida)
-|  4   4   1 |  (repetida)
+- Principales: 1*4*1 + 4*(-2)*(-2) + (-2)*10*1 = 4 + 16 - 20 = 0
+- Secundarias: (-2)*4*(-2) + 1*(-2)*1 + 1*10*4 = 16 - 2 + 40 = 54
+- Delta y = 0 - (54) = -54.
 
-Diagonales principales:
-- Primera diagonal: 1 * 4 * 1 = 4
-- Segunda diagonal: 4 * (-2) * (-2) = 16  (menos por menos da mas)
-- Tercera diagonal: (-2) * 10 * 1 = -20
-Suma de principales = 4 + 16 + (-20) = 0
-
-Diagonales secundarias:
-- Cuarta diagonal: (-2) * 4 * (-2) = 16
-- Quinta diagonal: 1 * (-2) * 1 = -2
-- Sexta diagonal: 1 * 10 * 4 = 40
-Suma de secundarias = 16 + (-2) + 40 = 54
-
-Calculamos Δy:
-Δy = 0 - (54) = -54.
-
-
-PASO 4: CALCULAR EL DETERMINANTE DE Z (Δz)
-Ahora dejamos las columnas de x e y originales, y reemplazamos la tercera 
-columna (la de z) por los terminos independientes (10, 4, -2):
-
+Paso 4: Delta z:
+Columna z cambiada por (10, 4, -2):
 |  1   2  10 |
 |  4  -1   4 |
 | -2   1  -2 |
---------------
-|  1   2  10 |  (repetida)
-|  4  -1   4 |  (repetida)
+- Principales: 1*(-1)*(-2) + 4*1*10 + (-2)*2*4 = 2 + 40 - 16 = 26
+- Secundarias: 10*(-1)*(-2) + 4*1*1 + (-2)*2*4 = 20 + 4 - 16 = 8
+- Delta z = 26 - (8) = 18.
 
-Diagonales principales:
-- Primera diagonal: 1 * (-1) * (-2) = 2
-- Segunda diagonal: 4 * 1 * 10 = 40
-- Tercera diagonal: (-2) * 2 * 4 = -16
-Suma de principales = 2 + 40 + (-16) = 26
+Paso 5: Soluciones:
+- x = (-36) / (-18) = 2
+- y = (-54) / (-18) = 3
+- z = (18) / (-18) = -1
 
-Diagonales secundarias:
-- Cuarta diagonal: 10 * (-1) * (-2) = 20
-- Quinta diagonal: 4 * 1 * 1 = 4
-- Sexta diagonal: (-2) * 2 * 4 = -16
-Suma de secundarias = 20 + 4 + (-16) = 8
-
-Calculamos Δz:
-Δz = 26 - (8) = 18.
+Paso 6: Comprobacion:
+x + 2y - 2z = (2) + 2(3) - 2(-1) = 2 + 6 + 2 = 10 (VERIFICADO).
 
 
-PASO 5: OBTENER LAS SOLUCIONES FINALES (LAS DIVISIONES)
-Ya tenemos los cuatro numeros:
-Δ = -18
-Δx = -36
-Δy = -54
-Δz = 18
+3. TU TURNO: EJERCICIO ESPEJO 2 (¡ALERTA: VARIABLE FALTANTE!)
+Resuelve el siguiente sistema aplicando el algoritmo:
+1)  x +  y + z = 6
+2)      2y - z = 1    (Pista: 0x + 2y - z = 1)
+3) 3x -  y + z = 4
 
-Ahora aplicamos las formulas de Cramer:
-- x = Δx / Δ = (-36) / (-18) = 2
-- y = Δy / Δ = (-54) / (-18) = 3
-- z = Δz / Δ = (18) / (-18) = -1
+------------------------------------------------------------------------
+[SOLUCION Y CHECKPOINT DEL EJERCICIO ESPEJO 2]
+------------------------------------------------------------------------
+Matriz ordenada:
+Fila 1:  1,  1,  1 | 6
+Fila 2:  0,  2, -1 | 1
+Fila 3:  3, -1,  1 | 4
 
-¡Las soluciones son x = 2, y = 3, z = -1!
+1. Calculo de Delta:
+- Principales: 1*2*1 + 0*(-1)*1 + 3*1*(-1) = 2 + 0 - 3 = -1
+- Secundarias: 1*2*3 + (-1)*(-1)*1 + 1*1*0 = 6 + 1 + 0 = 7
+- Delta = -1 - (7) = -8
+
+2. Calculo de Delta x (columna 1 = 6, 1, 4):
+- Principales: 6*2*1 + 1*(-1)*1 + 4*1*(-1) = 12 - 1 - 4 = 7
+- Secundarias: 1*2*4 + (-1)*(-1)*6 + 1*1*1 = 8 + 6 + 1 = 15
+- Delta x = 7 - (15) = -8
+
+3. Calculo de Delta y (columna 2 = 6, 1, 4):
+- Principales: 1*1*1 + 0*4*1 + 3*6*(-1) = 1 + 0 - 18 = -17
+- Secundarias: 1*1*3 + (-1)*4*1 + 1*6*0 = 3 - 4 + 0 = -1
+- Delta y = -17 - (-1) = -16
+
+4. Calculo de Delta z (columna 3 = 6, 1, 4):
+- Principales: 1*2*4 + 0*(-1)*6 + 3*1*1 = 8 + 0 + 3 = 11
+- Secundarias: 6*2*3 + 1*(-1)*1 + 4*1*0 = 36 - 1 + 0 = 35
+- Delta z = 11 - (35) = -24
+
+5. Soluciones finales:
+- x = (-8) / (-8) = 1
+- y = (-16) / (-8) = 2
+- z = (-24) / (-8) = 3
+
+6. Comprobacion:
+- Ec 1: 1 + 2 + 3 = 6 (Correcto)
+- Ec 2: 2(2) - 3 = 1 (Correcto)
+- Ec 3: 3(1) - 2 + 3 = 4 (Correcto)
 
 
-PARTE 4: EL SEGURO DE VIDA EN EL PARCIAL (LA COMPROBACION)
-----------------------------------------------------------
+========================================================================
+BLOQUE 3: PROTOCOLO ANTE TRAMPAS DE PARCIAL
+========================================================================
 
-En un examen nunca entregues un ejercicio de Cramer sin comprobarlo. Te toma 
-30 segundos y te garantiza un 5.0 en la pregunta.
-
-Tomas los tres valores encontrados (x = 2, y = 3, z = -1) y los reemplazas en 
-la primera ecuacion original:
-x + 2y - 2z = 10
-(2) + 2(3) - 2(-1)
-= 2 + 6 + 2
-= 10
-
-¡Dio exactamente 10! Eso significa que el ejercicio esta 100% perfecto.
-
-
-PARTE 5: LAS 3 TRAMPAS TIPICAS DE LOS PROFESORES EN CRAMER
-----------------------------------------------------------
-
-1. La variable faltante (Trampa mortal):
-En el ejercicio 2 de tu taller aparece esta segunda ecuacion:
-2y - z = 1
-¡Fijate que no hay ninguna x! 
-Cuando una letra no aparece en la ecuacion, su coeficiente es CERO (0).
-No vayas a poner 1 ni vayas a correr los numeros a la izquierda. En la matriz, 
-la fila debe escribirse obligatoriamente como: 0, 2, -1.
-
-2. La variable desordenada:
-A veces el profesor escribe la ecuacion al reves para confundirte: por ejemplo, 
-3z - x + 2y = 5.
-Antes de meter cualquier numero a la matriz, DEBES ordenar siempre las letras 
-en orden alfabetico: primero x, luego y, luego z:
--x + 2y + 3z = 5.
-
-3. ¿Que pasa si Δ da cero (Δ = 0)?:
-No puedes dividir entre cero. Si el determinante principal da 0, significa 
-que el sistema NO tiene solucion unica (puede no tener solucion o tener 
-infinitas soluciones). En ese caso se escribe: "El sistema no es compatible 
-determinado, por lo que la regla de Cramer no permite hallar solucion unica".
+1. Variable faltante: Si falta una letra en una ecuacion, su coeficiente 
+   es CERO (0). En la matriz pones 0 en esa posicion.
+2. Ecuacion desordenada: Ordena siempre en formato x, y, z = termino independiente 
+   antes de vaciar numeros a la matriz.
+3. Delta = 0: Si Delta da cero, no se puede dividir entre cero. El sistema 
+   no tiene solucion unica mediante Cramer.
