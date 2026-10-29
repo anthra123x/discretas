@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Formulario de Matemáticas Discretas — Fichas de Examen</title>
+<!-- KaTeX CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+
+<style>
+  @page {
+    size: A4;
+    margin: 9mm 12mm 9mm 12mm;
+  }
+  
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    background: #ffffff;
+    line-height: 1.35;
+    font-size: 9pt;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Header banner */
+  .header {
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header h1 {
+    font-size: 14pt;
+    font-weight: 800;
+    color: #1e3a8a;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  .header .subtitle {
+    font-size: 8pt;
+    color: #64748b;
+    font-weight: 600;
+  }
+  .header .badge {
+    background: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 7.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  /* Index pills */
+  .topics-nav {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 4px 8px;
+    border-radius: 5px;
+  }
+  .topics-nav span {
+    font-size: 7.5pt;
+    font-weight: 700;
+    color: #334155;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+
+  /* Section cards */
+  .card {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    page-break-inside: avoid;
+    overflow: hidden;
+  }
+  .card-header {
+    background: #f1f5f9;
+    border-bottom: 1px solid #cbd5e1;
+    padding: 4px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card-header h2 {
+    font-size: 10pt;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+  }
+  .card-header .tag {
+    font-size: 7pt;
+    font-weight: 700;
+    padding: 1px 5px;
+    border-radius: 3px;
+    background: #e2e8f0;
+    color: #475569;
+  }
+  .card-body {
+    padding: 7px 10px;
+  }
+
+  /* Notebook-style note badge */
+  .handnote {
+    background: #fffbeb;
+    color: #92400e;
+    border: 1px dashed #fcd34d;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 8pt;
+    font-weight: 600;
+    display: inline-block;
+    margin: 1px 0;
+  }
+  .handnote strong {
+    color: #78350f;
+  }
+
+  .alert-box {
+    background: #fef2f2;
+    border-left: 3px solid #ef4444;
+    padding: 4px 7px;
+    margin: 4px 0;
+    font-size: 7.5pt;
+    color: #991b1b;
+  }
+
+  /* Grid layout */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .grid-item {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 6px 8px;
+  }
+
+  /* Math and formula rows */
+  .formula-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 0;
+    border-bottom: 1px dotted #e2e8f0;
+  }
+  .formula-row:last-child {
+    border-bottom: none;
+  }
+  .formula-label {
+    font-weight: 600;
+    color: #334155;
+    font-size: 8.5pt;
+  }
+  .formula-math {
+    font-weight: 700;
+    color: #1e3a8a;
+    font-size: 9pt;
+  }
+  .formula-desc {
+    font-size: 7.5pt;
+    color: #64748b;
+    font-style: italic;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8pt;
+    margin: 3px 0;
+  }
+  th {
+    background: #f1f5f9;
+    color: #334155;
+    font-weight: 700;
+    text-align: left;
+    padding: 3px 5px;
+    border-bottom: 1.2px solid #cbd5e1;
+  }
+  td {
+    padding: 3px 5px;
+    border-bottom: 1px solid #e2e8f0;
+    vertical-align: top;
+  }
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* Specific highlights */
+  .symbol-badge {
+    background: #1e293b;
+    color: #ffffff;
+    font-weight: 800;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 8pt;
+    display: inline-block;
+  }
+  .hl-blue {
+    color: #2563eb;
+    font-weight: 700;
+  }
+  .hl-red {
+    color: #dc2626;
+    font-weight: 700;
+  }
+  .hl-green {
+    color: #16a34a;
+    font-weight: 700;
+  }
+
+  .step-list {
+    margin: 3px 0;
+    padding-left: 15px;
+    font-size: 8pt;
+  }
+  .step-list li {
+    margin-bottom: 2px;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+</style>
+</head>
+<body>
+
+  <!-- ========================================== -->
+  <!-- PÁGINA 1: SUCESIONES Y RECURRENCIAS -->
+  <!-- ========================================== -->
+  <div class="header">
+    <div>
+      <h1>Formulario de Matemáticas Discretas</h1>
+      <div class="subtitle">Fichero condensado de fórmulas, notación de cuaderno y algoritmos de examen</div>
+    </div>
+    <div class="badge">Ficha 1 / 3</div>
+  </div>
+
+  <div class="topics-nav">
+    <span style="background: #f0fdf4; border-color: #86efac; color: #166534;">🟢 TEMA 1: SUCESIONES Y RECURRENCIAS (Página 1 de Cuaderno)</span>
+  </div>
+
+  <div class="card" style="border-color: #86efac;">
+    <div class="card-header" style="background: #f0fdf4; border-color: #86efac;">
+      <h2 style="color: #166534;">1. Sucesiones: Término General y Aritméticas</h2>
+      <span class="tag" style="background: #dcfce7; color: #15803d;">Notación Idéntica al Cuaderno</span>
+    </div>
+    <div class="card-body">
+      
+      <div class="grid-2">
+        <!-- Fórmulas directas de término general -->
+        <div class="grid-item">
+          <strong style="color: #166534; font-size: 8.5pt; text-transform: uppercase;">Fórmulas Base de Término General (\(a_n\))</strong>
+          <div style="margin-top: 4px;">
+            <div class="formula-row">
+              <span class="formula-label">Impares:</span>
+              <span class="formula-math">\(a_n = 2n - 1\)</span>
+              <span class="formula-desc">\(1, 3, 5, 7, 9 \dots\)</span>
+            </div>
+            <div class="formula-row">
+              <span class="formula-label">Pares:</span>
+              <span class="formula-math">\(a_n = 2n\)</span>
+              <span class="formula-desc">\(2, 4, 6, 8, 10 \dots\)</span>
+            </div>
+            <div class="formula-row">
+              <span class="formula-label">Cuadrados:</span>
+              <span class="formula-math">\(a_n = n^2\)</span>
+              <span class="formula-desc">\(1, 4, 9, 16, 25 \dots\)</span>
+            </div>
+            <div class="formula-row">
+              <span class="formula-label">Cubos:</span>
+              <span class="formula-math">\(a_n = n^3\)</span>
+              <span class="formula-desc">\(1, 8, 27, 64, 125 \dots\)</span>
+            </div>
+            <div class="formula-row">
+              <span class="formula-label">Potencias de 2:</span>
+              <span class="formula-math">\(a_n = 2^n\)</span>
+              <span class="formula-desc">\(2, 4, 8, 16, 32 \dots\)</span>
+            </div>
+            <div class="formula-row">
+              <span class="formula-label">Fracciones:</span>
+              <span class="formula-math">\(a_n = \frac{1}{2^{n-1}}\)</span>
+              <span class="formula-desc">\(1, \frac{1}{2}, \frac{1}{4}, \frac{1}{8} \dots\)</span>
+            </div>
+            <div class="formula-row">
+              <span class="formula-label">Múltiplos en \(\mathbb{Z}\):</span>
+              <span class="formula-math">\(a_n = 3k \quad (k \in \mathbb{Z})\)</span>
+              <span class="formula-desc">\(\dots, -6, -3, 0, 3, 6 \dots\)</span>
+            </div>
+          </div>
+          <div class="handnote" style="margin-top: 4px; width: 100%;">
+            ✏️ <em>(Cuando se arma la fórmula por comprensión: \(\{ 2k \mid k \in \mathbb{N}, 1 \le k \le 5 \}\))</em>
+          </div>
+        </div>
+
+        <!-- Sucesión Aritmética (idéntica a la nota manuscrita) -->
+        <div class="grid-item">
+          <strong style="color: #166534; font-size: 8.5pt; text-transform: uppercase;">Sucesión Aritmética (Diferencia Constante \(d\))</strong>
+          <div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 4px; padding: 5px; margin: 4px 0;">
+            <div style="font-size: 8pt; font-family: monospace; color: #0f172a;">
+              <strong>Ejemplo de cuaderno:</strong><br>
+              &nbsp;a₁ &nbsp;&nbsp;&nbsp; a₂ &nbsp;&nbsp;&nbsp; a₃ &nbsp;&nbsp;&nbsp; a₄ &nbsp;&nbsp;&nbsp; a₅<br>
+              &nbsp;<strong>2, &nbsp;&nbsp;&nbsp; 5, &nbsp;&nbsp;&nbsp; 8, &nbsp;&nbsp; 11, &nbsp;&nbsp; 14, ...</strong><br>
+              &nbsp; └+3─┘ └+3─┘ └+3─┘ └+3─┘ &nbsp;→ <span class="hl-green">diferencia "d" = +3</span>
+            </div>
+            <div class="handnote" style="margin-top: 3px;">
+              💡 <em>(Cuando "d" es la misma, es una sucesión aritmética)</em>
+            </div>
+          </div>
+          
+          <div style="font-size: 8pt;">
+            <strong>Fórmula General:</strong><br>
+            <div style="text-align: center; font-size: 10.5pt; padding: 2px 0;" class="hl-blue">
+              \(a_n = a_1 + (n - 1)d\)
+            </div>
+            <div style="font-size: 7pt; color: #475569; text-align: center;">
+              \(a_n \rightarrow\) <strong>n-ésimo</strong> &nbsp;|&nbsp; \(a_1 \rightarrow\) <strong>1.er término</strong> &nbsp;|&nbsp; \(d \rightarrow\) <strong>diferencia</strong>
+            </div>
+            <div style="margin-top: 4px; background: #f8fafc; padding: 4px 6px; border-radius: 3px; border: 1px solid #e2e8f0;">
+              <strong>Cálculo directo (3 pasos):</strong><br>
+              1. \(a_n = 2 + (n - 1)(3) = 2 + 3n - 3\)<br>
+              2. Término general: <span class="hl-blue"><strong>\(3n - 1\)</strong></span><br>
+              3. Verificación con \(n = 1\): \(3(1) - 1 = 2 \quad \checkmark\)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Alternancia y Recurrencias -->
+      <div class="grid-2" style="margin-top: 6px;">
+        <div class="grid-item">
+          <strong style="color: #166534; font-size: 8pt; text-transform: uppercase;">Alternancia de Signos (Fórmulas Clave)</strong>
+          <table style="margin-top: 3px;">
+            <tr>
+              <td><strong>Empieza Negativo (\(-, +, -, +\)):</strong></td>
+              <td><span class="hl-blue">\(a_n = (-1)^n \cdot (\text{término})\)</span></td>
+            </tr>
+            <tr>
+              <td><strong>Empieza Positivo (\(+, -, +, -\)):</strong></td>
+              <td><span class="hl-blue">\(a_n = (-1)^{n+1} \cdot (\text{término})\)</span></td>
+            </tr>
+            <tr>
+              <td><strong>Ejemplo de cuaderno:</strong> <small>\(+3, -9, +27, -81 \dots\)</small></td>
+              <td><span class="hl-green">\(a_n = (-1)^{n+1} \cdot 3^n\)</span></td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="grid-item">
+          <strong style="color: #166534; font-size: 8pt; text-transform: uppercase;">Sucesión Recurrente (Ejemplo Exacto de Cuaderno)</strong>
+          <div style="font-size: 8pt; margin-top: 3px;">
+            Definición: \(f_1 = -2, \quad f_2 = 1, \quad \mathbf{f_k = 3f_{k-1} - f_{k-2}} \quad (k \ge 3)\)<br>
+            • Para \(k = 3\): \(f_3 = 3f_{3-1} - f_{3-2} = 3f_2 - f_1\)<br>
+            &nbsp;&nbsp;\(f_3 = 3(1) - (-2) = 3 + 2 \implies \mathbf{f_3 = 5}\)<br>
+            • Para \(k = 4\): \(f_4 = 3f_3 - f_2 = 3(5) - (1) = 15 - 1 \implies \mathbf{f_4 = 14}\)
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- ========================================== -->
+  <!-- PÁGINA 2: TEORÍA DE CONJUNTOS Y OPERACIONES -->
+  <!-- ========================================== -->
+  <div class="header">
+    <div>
+      <h1>Formulario de Matemáticas Discretas</h1>
+      <div class="subtitle">Fichero condensado de fórmulas, notación de cuaderno y algoritmos de examen</div>
+    </div>
+    <div class="badge">Ficha 2 / 3</div>
+  </div>
+
+  <div class="topics-nav">
+    <span style="background: #eff6ff; border-color: #93c5fd; color: #1e40af;">🔵 TEMA 2: CONJUNTOS Y OPERACIONES (Página 2 de Cuaderno)</span>
+  </div>
+
+  <div class="card" style="border-color: #93c5fd;">
+    <div class="card-header" style="background: #eff6ff; border-color: #93c5fd;">
+      <h2 style="color: #1e40af;">2. Conjuntos: Operaciones, Pertenencia e Inclusión</h2>
+      <span class="tag" style="background: #dbeafe; color: #1e40af;">Frases y Reglas Exactas del Cuaderno</span>
+    </div>
+    <div class="card-body">
+      
+      <!-- Tabla de Simbología y Operaciones idéntica a la hoja manuscrita -->
+      <table style="margin-bottom: 6px;">
+        <thead>
+          <tr>
+            <th style="width: 12%;">Símbolo</th>
+            <th style="width: 20%;">Operación</th>
+            <th style="width: 48%;">Significado / Frase Exacta de Cuaderno</th>
+            <th style="width: 20%;">Fórmula / Regla</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="symbol-badge">U</span></td>
+            <td><strong>Unión</strong></td>
+            <td><span class="handnote">"todos los elementos unidos de ambos conjuntos"</span> <small>(sin repetir)</small></td>
+            <td>\(A \cup B = \{x \mid x \in A \lor x \in B\}\)</td>
+          </tr>
+          <tr>
+            <td><span class="symbol-badge">∩</span></td>
+            <td><strong>Intersección</strong></td>
+            <td><span class="handnote">"elementos que tienen ambos / que comparten"</span></td>
+            <td>\(A \cap B = \{x \mid x \in A \land x \in B\}\)</td>
+          </tr>
+          <tr>
+            <td><span class="symbol-badge">−</span></td>
+            <td><strong>Diferencia</strong></td>
+            <td><span class="handnote">"elementos que están en A pero no en B"</span></td>
+            <td>\(A - B = \{x \mid x \in A \land x \notin B\}\)</td>
+          </tr>
+          <tr>
+            <td><span class="symbol-badge">'</span></td>
+            <td><strong>Complemento</strong></td>
+            <td><span class="handnote">"los que sobran / los que no se cruzan / los de U que no están en A"</span></td>
+            <td>\(A' = U - A = \{x \in U \mid x \notin A\}\)</td>
+          </tr>
+          <tr>
+            <td><span class="symbol-badge">Δ</span></td>
+            <td><strong>Diferencia Simétrica</strong></td>
+            <td><span class="handnote">"lo contrario de intersección / están en uno o en otro pero no en ambos"</span></td>
+            <td>\((A - B) \cup (B - A)\)<br>\((A \cup B) - (A \cap B)\)</td>
+          </tr>
+          <tr>
+            <td><span class="symbol-badge">⊆</span></td>
+            <td><strong>Subconjunto</strong></td>
+            <td><span class="handnote">"quitar llaves y verificar que cada elemento pertenezca a la derecha"</span></td>
+            <td>\(\forall x (x \in A \implies x \in B)\)</td>
+          </tr>
+          <tr>
+            <td><span class="symbol-badge">∈</span></td>
+            <td><strong>Pertenencia</strong></td>
+            <td><span class="handnote">"abrir la caja: debe aparecer idéntico tal cual (con o sin llaves)"</span></td>
+            <td>\(x \in A \quad (\text{Elemento} \in \text{Conjunto})\)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Reglas Críticas de Examen y Leyes -->
+      <div class="grid-2">
+        <div class="grid-item">
+          <strong style="color: #1e40af; font-size: 8pt; text-transform: uppercase;">Reglas de Oro Universales de Examen</strong>
+          <ul class="step-list" style="margin-top: 3px;">
+            <li><strong>\(\emptyset \subseteq A\):</strong> <span class="hl-green">SIEMPRE VERDADERO</span> para cualquier conjunto.</li>
+            <li><strong>Elemento sin llaves \(\subseteq A\):</strong> <span class="hl-red">SIEMPRE FALSO</span> (ej: \(3 \subseteq A\) es falso; debe llevar llaves: \(\{3\} \subseteq A\)).</li>
+            <li><strong>\(\emptyset \in A\):</strong> Solo VERDADERO si el símbolo \(\emptyset\) está escrito adentro de \(A\).</li>
+            <li><strong>\(\{\emptyset\} \subseteq A\):</strong> Destapamos: queda \(\emptyset\). Si \(\emptyset \in A\), entonces es VERDADERO.</li>
+          </ul>
+        </div>
+
+        <div class="grid-item">
+          <strong style="color: #1e40af; font-size: 8pt; text-transform: uppercase;">Leyes de De Morgan y Operaciones Combinadas</strong>
+          <ul class="step-list" style="margin-top: 3px;">
+            <li><strong>De Morgan 1:</strong> \((A \cap B)' = A' \cup B'\)</li>
+            <li><strong>De Morgan 2:</strong> \((A \cup B)' = A' \cap B'\)</li>
+            <li><strong>Diferencia con paréntesis:</strong> \(A - (B \cap C) = (A - B) \cup (A - C)\)</li>
+            <li><strong>Unión de diferencias:</strong> \((A - C) \cup (B - C) = (A \cup B) - C\)</li>
+            <li><strong>Doble complemento e identidades:</strong> \((A')' = A, \quad U' = \emptyset, \quad \emptyset' = U\)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Filtros de Universo y Álgebra -->
+      <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 4px; padding: 5px 8px; margin-top: 6px; font-size: 8pt;">
+        <strong style="color: #1e40af; text-transform: uppercase;">Filtros de Universo y Álgebra (Sección 2 del Taller):</strong>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 3px;">
+          <div>
+            • <strong>En \(\mathbb{N}\) (Naturales):</strong> Solo enteros positivos \(\{1, 2, 3 \dots\}\). Descartar negativos, cero y fracciones.<br>
+            • <strong>En \(\mathbb{Z}\) (Enteros):</strong> Admite negativos, cero y positivos \(\{\dots, -1, 0, 1 \dots\}\). Descartar fracciones.
+          </div>
+          <div>
+            • <strong>Disyunción ("\(\lor\)" o "o"):</strong> Unir todas las soluciones: \(\text{Sol}_1 \cup \text{Sol}_2\).<br>
+            • <strong>Valor Absoluto:</strong> \(|u| \le k \iff -k \le u \le k\) &nbsp;|&nbsp; \(|u| < k \iff -k < u < k\).
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- ========================================== -->
+  <!-- PÁGINA 3: DETERMINANTES, CRAMER Y MATRICES -->
+  <!-- ========================================== -->
+  <div class="header">
+    <div>
+      <h1>Formulario de Matemáticas Discretas</h1>
+      <div class="subtitle">Fichero condensado de fórmulas, notación de cuaderno y algoritmos de examen</div>
+    </div>
+    <div class="badge">Ficha 3 / 3</div>
+  </div>
+
+  <div class="topics-nav">
+    <span style="background: #fefce8; border-color: #fde047; color: #854d0e;">🟡 TEMA 3: DETERMINANTES</span>
+    <span style="background: #faf5ff; border-color: #d8b4fe; color: #6b21a8;">🟣 TEMA 4: REGLA DE CRAMER</span>
+    <span style="background: #fff7ed; border-color: #fed7aa; color: #9a3412;">🟠 TEMA 5: OPERACIONES CON MATRICES</span>
+  </div>
+
+  <!-- TEMA 3: DETERMINANTES -->
+  <div class="card" style="border-color: #fde047;">
+    <div class="card-header" style="background: #fefce8; border-color: #fde047; padding: 3px 8px;">
+      <h2 style="color: #854d0e; font-size: 9.5pt;">3. Determinantes: Regla de Sarrus (\(3 \times 3\)) y \(2 \times 2\)</h2>
+      <span class="tag" style="background: #fef08a; color: #854d0e;">Cálculo Rápido</span>
+    </div>
+    <div class="card-body" style="padding: 5px 8px;">
+      <div class="grid-2">
+        <div>
+          <strong>Determinante \(2 \times 2\):</strong> &nbsp;
+          \(\begin{vmatrix} a & b \\ c & d \end{vmatrix} = a \cdot d - b \cdot c\)
+        </div>
+        <div>
+          <strong>Regla de Sarrus \(3 \times 3\):</strong> Copiar filas 1 y 2 debajo de la fila 3:
+          \(\begin{matrix} a & b & c \\ d & e & f \\ g & h & i \\ \hline a & b & c \\ d & e & f \end{matrix}\)
+        </div>
+      </div>
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 4px; padding: 4px 6px; margin-top: 4px; font-size: 7.8pt;">
+        <div style="display: flex; justify-content: space-between;">
+          <span><span class="hl-blue"><strong>Principales (\(\searrow\)):</strong></span> \(P = (aei) + (dhc) + (gbf)\)</span>
+          <span><span class="hl-red"><strong>Secundarias (\(\swarrow\)):</strong></span> \(S = (ceg) + (fha) + (ibd)\)</span>
+          <span><strong>Resultado:</strong> \(\mathbf{\Delta = P - (S)}\)</span>
+        </div>
+        <div class="alert-box" style="margin-top: 3px; padding: 2px 5px;">
+          ⚠️ <strong>OJO CON EL MENOS:</strong> Cambia los signos de todo \(S\). Si \(P = -13\) y \(S = 5 \implies \Delta = -13 - (5) = -18\). Si \(S = -4 \implies -(-4) = +4\).
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEMA 4: REGLA DE CRAMER -->
+  <div class="card" style="border-color: #d8b4fe;">
+    <div class="card-header" style="background: #faf5ff; border-color: #d8b4fe; padding: 3px 8px;">
+      <h2 style="color: #6b21a8; font-size: 9.5pt;">4. Regla de Cramer (Sistemas \(3 \times 3\))</h2>
+      <span class="tag" style="background: #f3e8ff; color: #6b21a8;">Fórmulas y Trampas</span>
+    </div>
+    <div class="card-body" style="padding: 5px 8px;">
+      <div class="grid-2">
+        <div style="text-align: center; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 4px; padding: 4px;">
+          <strong style="color: #6b21a8; font-size: 8pt;">Fórmulas de las Incógnitas:</strong>
+          <div style="font-size: 10pt; font-weight: 700; color: #1e3a8a; padding: 2px 0;">
+            \(x = \frac{\Delta_x}{\Delta}, \quad y = \frac{\Delta_y}{\Delta}, \quad z = \frac{\Delta_z}{\Delta} \quad (\Delta \ne 0)\)
+          </div>
+          <div style="font-size: 7pt; color: #64748b;">\(\Delta\): coeficientes | \(\Delta_x, \Delta_y, \Delta_z\): cambiar col respectiva por independientes</div>
+        </div>
+
+        <div style="background: #fffbeb; border: 1px solid #fcd34d; border-radius: 4px; padding: 4px 6px; font-size: 7.5pt;">
+          <strong>🚨 Trampa de Variable Ausente:</strong><br>
+          Si falta una letra (ej: \(2y - z = 1\)), su coeficiente es obligatoriamente <span class="hl-red"><strong>0</strong></span>:
+          $$0x + 2y - 1z = 1 \implies \text{Fila: } [0, \ 2, \ -1]$$
+          <strong>🛡️ Comprobación en 30s:</strong> Reemplaza \((x, y, z)\) en ecuación 1. Debe dar el término independiente.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEMA 5: OPERACIONES CON MATRICES -->
+  <div class="card" style="border-color: #fed7aa; margin-bottom: 0;">
+    <div class="card-header" style="background: #fff7ed; border-color: #fed7aa; padding: 3px 8px;">
+      <h2 style="color: #9a3412; font-size: 9.5pt;">5. Operaciones con Matrices</h2>
+      <span class="tag" style="background: #ffedd5; color: #9a3412;">Álgebra Matricial</span>
+    </div>
+    <div class="card-body" style="padding: 5px 8px;">
+      <div class="grid-2">
+        <div class="grid-item" style="padding: 4px 6px; font-size: 7.8pt;">
+          <strong>Suma / Resta / Escalar:</strong><br>
+          • <strong>\(A \pm B\):</strong> Mismo orden (\(m \times n\)) \(\rightarrow (A \pm B)_{ij} = A_{ij} \pm B_{ij}\)<br>
+          • <strong>\(k \cdot A\):</strong> Multiplicar cada entrada por \(k \rightarrow (k A)_{ij} = k \cdot A_{ij}\)
+        </div>
+        <div class="grid-item" style="padding: 4px 6px; font-size: 7.8pt;">
+          <strong>Transpuesta (\(A^T\)):</strong> Filas pasan a ser columnas.<br>
+          \((A^T)_{ij} = A_{ji}\) &nbsp;|&nbsp; \((A^T)^T = A\) &nbsp;|&nbsp; \((A + B)^T = A^T + B^T\)<br>
+          • <span class="hl-red">Ojo:</span> \((A \cdot B)^T = B^T \cdot A^T\)
+        </div>
+      </div>
+
+      <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 4px; padding: 4px 6px; margin-top: 4px; font-size: 7.8pt;">
+        <strong>Multiplicación de Matrices (\(A \cdot B\)) — Regla de Fila \(\times\) Columna:</strong>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2px;">
+          <div>
+            • <strong>Compatibilidad:</strong> Columnas de \(A\) = Filas de \(B\) \(\implies (m \times \mathbf{k}) \cdot (\mathbf{k} \times n) = (\mathbf{m \times n})\)
+          </div>
+          <div>
+            • <strong>Fórmula:</strong> \((A \cdot B)_{ij} = \sum_{p=1}^k A_{ip} B_{pj}\) &nbsp;|&nbsp; <span class="hl-red">⚠️ \(A \cdot B \ne B \cdot A\) (NO conmutativa)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+
+</body>
+</html>
