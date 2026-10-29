@@ -30,7 +30,12 @@ Colección académica de apuntes teóricos, talleres de ejercicios prácticos y 
 >
 > 📥 **Formatos:** [📄 `diccionario_simbolos.txt`](./diccionario_simbolos.txt) &nbsp;•&nbsp; [📕 `diccionario_simbolos.pdf`](./diccionario_simbolos.pdf) &nbsp;•&nbsp; [🔍 Ver desglose](#4-diccionario-de-símbolos-matemáticos)
 
-### ✏️ 05. Taller 01: Ejercicios de Práctica
+### 📌 05. Formulario Oficial y Fichero de Reglas
+> Compendio maestro de fórmulas condensadas para resolución rápida: sucesiones aritméticas y geométricas, criterios de pertenencia/inclusión, álgebra con filtros de universo ($\mathbb{N}$ y $\mathbb{Z}$), leyes de De Morgan, Sarrus/Cramer y matrices.
+>
+> 📥 **Formatos:** [💻 `FORMULARIO_MATEMATICAS_DISCRETAS.md`](./FORMULARIO_MATEMATICAS_DISCRETAS.md) &nbsp;•&nbsp; [📄 `FORMULARIO_MATEMATICAS_DISCRETAS.txt`](./FORMULARIO_MATEMATICAS_DISCRETAS.txt)
+
+### ✏️ 06. Taller 01: Ejercicios de Práctica
 > Taller de ejercitación práctica a mano con problemas seleccionados de pertenencia, inclusión y conversión entre comprensión y extensión para preparar evaluaciones.
 >
 > 📥 **Formatos:** [📄 `taller_01_conjuntos_ejercicios.txt`](./taller_01_conjuntos_ejercicios.txt) &nbsp;•&nbsp; [📕 `taller_01_conjuntos_ejercicios.pdf`](./taller_01_conjuntos_ejercicios.pdf) &nbsp;•&nbsp; [🔍 Ver desglose](#5-taller-de-práctica)
@@ -77,6 +82,8 @@ discretas/
 ├── 03_conjuntos_ejercicios_explicados.md # Módulo 3 interactivo con soluciones desplegables
 ├── 03_conjuntos_ejercicios_explicados.txt# Módulo 3 en texto plano
 ├── 03_conjuntos_ejercicios_explicados.pdf# Módulo 3 versión tipografiada
+├── FORMULARIO_MATEMATICAS_DISCRETAS.md   # Formulario oficial interactivo
+├── FORMULARIO_MATEMATICAS_DISCRETAS.txt  # Formulario oficial en texto plano
 ├── diccionario_simbolos.txt              # Diccionario de consulta rápida
 ├── diccionario_simbolos.pdf              # Diccionario versión tipografiada
 ├── taller_01_conjuntos_ejercicios.txt    # Taller para práctica a mano

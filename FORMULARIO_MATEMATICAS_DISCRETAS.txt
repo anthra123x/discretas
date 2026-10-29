@@ -1,0 +1,190 @@
+========================================================================
+FORMULARIO OFICIAL Y FICHERO DE REGLAS - MATEMATICAS DISCRETAS
+========================================================================
+
+Guia rapida de formulas y algoritmos de decision para resolver todos los 
+ejercicios del taller y preparar evaluaciones parciales.
+
+
+========================================================================
+1. PERTENENCIA (∈) VS. INCLUSION (⊆)
+========================================================================
+
+- Pertenencia (x ∈ A):
+  Abre la caja A: el objeto x debe estar IDENTICO TAL CUAL (con llaves 
+  o sin llaves). Si esta identico -> V. Si no -> F.
+
+- No pertenencia (x ∉ A):
+  Si el objeto no aparece exactamente identico en A -> V.
+
+- Inclusion (X ⊆ A):
+  Regla del destape: Quita el par exterior de llaves de X. Cada elemento 
+  resultante debe pertenecer a A. Si todos estan -> V. Si falta uno -> F.
+
+- Elemento sin llaves ⊆ A:
+  SIEMPRE FALSO. Ejemplo: 3 ⊆ A es FALSO de inmediato (un numero suelto 
+  no tiene llaves).
+
+- Vacio subconjunto (∅ ⊆ A):
+  SIEMPRE VERDADERO para cualquier conjunto existente.
+
+- Vacio elemento (∅ ∈ A):
+  Solo es VERDADERO si el profesor escribio explicitamente el simbolo ∅ 
+  dentro de las llaves de A.
+
+- Conjunto del vacio ({∅} ⊆ A):
+  Al destapar queda ∅. Si ∅ ∈ A, entonces {∅} ⊆ A es VERDADERO.
+
+
+========================================================================
+2. DE COMPRENSION A EXTENSION (CONDICIONES Y FILTROS)
+========================================================================
+
+1. Ecuacion Cuadratica (ax^2 + bx + c = 0):
+   Formula general: x = [ -b ± √(b^2 - 4ac) ] / (2a)
+   Factorizacion: (x - r1)(x - r2) = 0 -> x = r1, x = r2.
+
+   Filtro estricto de Universo:
+   - Si x ∈ N (Naturales): Solo enteros estrictamente positivos {1, 2, 3, ...}.
+     Se descartan raices negativas, el cero y fracciones.
+   - Si x ∈ Z (Enteros): Admite negativos, cero y positivos {..., -1, 0, 1, ...}.
+     Se descartan fracciones y decimales.
+
+2. Letras de palabra:
+   Se extrae cada letra individual eliminando repeticiones:
+   "excusa" -> { a, c, e, s, u, x }
+
+3. Conectores Logicos:
+   - Disyuncion ('v' o 'o'): Se unen las soluciones de ambas condiciones.
+     Sol_final = Sol_1 U Sol_2
+   - Conjuncion ('^' o 'y'): Solo se toman las soluciones comunes.
+     Sol_final = Sol_1 ∩ Sol_2
+
+4. Intervalos:
+   - a <= x < b  -> Incluye a, no incluye b.
+   - a < x <= b  -> No incluye a, incluye b.
+   - a <= x <= b -> Incluye ambos extremos.
+
+5. Valor Absoluto:
+   - |u| < k   <=>  -k < u < k
+   - |u| <= k  <=>  -k <= u <= k
+   - |u| > k   <=>  u < -k  v  u > k
+   - |u| >= k  <=>  u <= -k  v  u >= k
+
+
+========================================================================
+3. SUCESIONES Y FORMULAS DE TERMINO GENERAL (an)
+========================================================================
+
+- Numeros Pares:
+  an = 2n                      -> { 2k / k ∈ N, 1 <= k <= n }
+
+- Numeros Impares:
+  an = 2n - 1                  -> { 2k - 1 / k ∈ N, 1 <= k <= n }
+
+- Sucesion Aritmetica (diferencia constante d):
+  an = a1 + (n - 1)d           -> an = d*n + (a1 - d)
+  Ejemplo: 2, 5, 8, 11 (d = +3) -> an = 3n - 1
+
+- Cuadrados Perfectos:
+  an = n^2                     -> { k^2 / k ∈ N, 1 <= k <= n }
+  Secuencia: 1, 4, 9, 16, 25 ...
+
+- Cubos Perfectos:
+  an = n^3                     -> { k^3 / k ∈ N, 1 <= k <= n }
+  Secuencia: 1, 8, 27, 64, 125 ...
+
+- Potencias de 2 (Geometrica):
+  an = 2^n                     -> { 2^k / k ∈ N, 1 <= k <= n }
+  Secuencia: 2, 4, 8, 16, 32, 64 ...
+
+- Potencias Fraccionarias:
+  an = 1 / (2^(n - 1))         -> 1, 1/2, 1/4, 1/8 ...
+
+- Multiplos Enteros Infinitos:
+  an = m*k con k ∈ Z           -> { 3k / k ∈ Z } para { ..., -3, 0, 3, ... }
+
+- Alternancia de Signos:
+  Si empieza negativo (-, +, -, +): an = (-1)^n * (termino)
+  Si empieza positivo (+, -, +, -): an = (-1)^(n + 1) * (termino)
+  Ejemplo: -3, +9, -27, +81 -> an = (-1)^n * 3^n
+
+- Sucesion Recurrente:
+  f1 = -2, f2 = 1, fk = 3*f(k-1) - f(k-2) para k >= 3.
+  Se evalua sucesivamente: f3 = 3(1) - (-2) = 5.
+
+
+========================================================================
+4. OPERACIONES ENTRE CONJUNTOS Y LEYES DE DE MORGAN
+========================================================================
+
+Definiciones de Operaciones:
+- Union (A U B): Junta todos los de A y B sin repetir.
+- Interseccion (A ∩ B): Solo elementos comunes presentes en ambos.
+- Diferencia (A - B): A los de A les quitas los que esten en B.
+- Complemento (A'): Elementos del Universal U que no estan en A (U - A).
+- Diferencia Simetrica (A Δ B):
+  Formula 1: (A - B) U (B - A)
+  Formula 2: (A U B) - (A ∩ B)
+
+Leyes Fundamentales:
+- De Morgan:
+  (A ∩ B)' = A' U B'
+  (A U B)' = A' ∩ B'
+- Diferencia con Interseccion / Union:
+  A - (B ∩ C) = (A - B) U (A - C)
+  A - (B U C) = (A - B) ∩ (A - C)
+  (A - C) U (B - C) = (A U B) - C
+- Doble Complemento e Identidades:
+  (A')' = A
+  U' = ∅,  ∅' = U
+  A U A' = U,  A ∩ A' = ∅
+
+
+========================================================================
+5. REGLA DE CRAMER Y DETERMINANTES
+========================================================================
+
+- Determinante 2x2:
+  | a  b |
+  | c  d | = a*d - b*c
+
+- Determinante 3x3 (Regla de Sarrus):
+  Duplicando filas 1 y 2 abajo:
+  Delta = (Principales \) - (Secundarias /)
+  Delta = (a*e*i + d*h*c + g*b*f) - (c*e*g + f*h*a + i*b*d)
+
+- Formulas de Cramer para Sistemas 3x3:
+  x = Delta_x / Delta
+  y = Delta_y / Delta
+  z = Delta_z / Delta   (Siempre que Delta != 0)
+
+  Delta: coeficientes de x, y, z.
+  Delta_x: sustituir columna x por terminos independientes.
+  Delta_y: sustituir columna y por terminos independientes.
+  Delta_z: sustituir columna z por terminos independientes.
+
+- Regla de la Variable Ausente:
+  Si en una ecuacion no aparece una variable, su coeficiente es CERO (0).
+
+
+========================================================================
+6. OPERACIONES CON MATRICES
+========================================================================
+
+- Suma y Resta (A ± B):
+  Misma dimension requerida (m x n).
+  (A ± B)_ij = A_ij ± B_ij
+
+- Multiplicacion por Escalar (k * A):
+  (k * A)_ij = k * A_ij
+
+- Multiplicacion de Matrices (A * B):
+  Condicion: Columnas de A = Filas de B.
+  (m x k) * (k x n) -> Resultado de orden (m x n).
+  Formula: (A * B)_ij = Suma [ A_ip * B_pj ]
+  Propiedad: A * B != B * A (No es conmutativa).
+
+- Transpuesta de una Matriz (A^T):
+  (A^T)_ij = A_ji (Filas pasan a ser columnas).
+  Propiedades: (A^T)^T = A,  (A + B)^T = A^T + B^T,  (A * B)^T = B^T * A^T.
